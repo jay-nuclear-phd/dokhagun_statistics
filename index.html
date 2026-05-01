@@ -129,13 +129,21 @@
     }
 
     function updateChart(weekIdx) {
-      // 버튼 활성화 표시
       const btns = document.querySelectorAll(".toggle-btn");
       btns.forEach((btn, i) => {
         btn.classList.toggle("active", i === weekIdx);
       });
 
       const targetWeek = weeks[weekIdx];
+      
+      // 목표 수치 계산
+      let goal = 3; // 주차 기본값
+      if (weekIdx === 0) {
+        // "이번 달" 선택 시: (주차 수 * 3)
+        const weekCount = weeks.length - 1;
+        goal = weekCount * 3;
+      }
+
       const filtered = allItems.filter(item => {
         if (!item.date) return false;
         const [y, m, d] = item.date.split('.').map(s => parseInt(s.trim(), 10));
@@ -143,24 +151,27 @@
         return postDate >= targetWeek.start && postDate <= targetWeek.end;
       });
 
-      // 작성자별 글 수 계산
       const stats = {};
       filtered.forEach(item => {
         stats[item.writer] = (stats[item.writer] || 0) + 1;
       });
 
-      // 이름순(가나다순) 정렬
       const sortedWriters = Object.entries(stats)
         .sort((a, b) => a[0].localeCompare(b[0]));
 
       const labels = sortedWriters.map(s => s[0]);
       const dataValues = sortedWriters.map(s => s[1]);
 
+      // 목표 달성 여부에 따른 색상 및 투명도 설정
+      const backgroundColors = dataValues.map(v => 
+        v >= goal ? 'rgba(54, 162, 235, 0.8)' : 'rgba(255, 99, 132, 0.3)'
+      );
+      const borderColors = dataValues.map(v => 
+        v >= goal ? 'rgba(54, 162, 235, 1)' : 'rgba(255, 99, 132, 0.5)'
+      );
+
       const ctx = document.getElementById('activityChart').getContext('2d');
-      
-      if (myChart) {
-        myChart.destroy();
-      }
+      if (myChart) myChart.destroy();
 
       myChart = new Chart(ctx, {
         type: 'bar',
@@ -169,8 +180,8 @@
           datasets: [{
             label: '작성 글 수',
             data: dataValues,
-            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            backgroundColor: backgroundColors,
+            borderColor: borderColors,
             borderWidth: 1,
             borderRadius: 6
           }]
@@ -181,13 +192,38 @@
           scales: {
             y: {
               beginAtZero: true,
-              ticks: { stepSize: 1 }
+              ticks: { stepSize: 1 },
+              suggestedMax: goal + 2
             }
           },
           plugins: {
-            legend: { display: false }
+            legend: { display: false },
+            // 목표 점선 그리기 (annotation 플러그인 대신 단순 세그먼트 활용은 어려우므로 후처리기 사용)
           }
-        }
+        },
+        plugins: [{
+          id: 'goalLine',
+          afterDraw: (chart) => {
+            const { ctx, chartArea: { left, right }, scales: { y } } = chart;
+            const yPos = y.getPixelForValue(goal);
+            
+            ctx.save();
+            ctx.beginPath();
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.strokeStyle = 'rgba(255, 99, 132, 0.8)';
+            ctx.moveTo(left, yPos);
+            ctx.lineTo(right, yPos);
+            ctx.stroke();
+            
+            // 목표 텍스트 표시
+            ctx.fillStyle = 'rgba(255, 99, 132, 1)';
+            ctx.font = 'bold 12px sans-serif';
+            ctx.textAlign = 'right';
+            ctx.fillText(`목표: ${goal}개`, right, yPos - 5);
+            ctx.restore();
+          }
+        }]
       });
     }
 
@@ -213,7 +249,7 @@
       const bestMonth = Object.keys(monthCount).reduce((a, b) => (monthCount[a] > monthCount[b] ? a : b), "");
 
       if (bestYear && bestMonth) {
-        const titleText = `독하군 카페 ${bestYear}년 ${bestMonth}월 모임 글쓰기 현황`;
+        const titleText = `📚 독하군 카페 ${bestYear}년 ${bestMonth}월 모임 글쓰기 현황`;
         document.getElementById("pageTitle").textContent = titleText;
         document.getElementById("mainHeading").textContent = titleText;
         document.getElementById("monthLabel").textContent = `${bestMonth}월 모임`;
