@@ -77,5 +77,4 @@ echo Dokhagun update finished
 echo %date% %time%
 echo ========================================
 
-pause
 exit /b 0

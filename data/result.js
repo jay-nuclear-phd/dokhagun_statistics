@@ -1,8 +1,8 @@
 window.naverCafeData = {
-  "updated_at": "2026-05-01 11:55:06",
+  "updated_at": "2026-05-01 12:00:06",
   "start_date": "2026-03-30",
   "end_date": "2026-04-26",
-  "count": 419,
+  "count": 404,
   "items": [
     {
       "menu": "37",
@@ -563,126 +563,6 @@ window.naverCafeData = {
       "date": "2026.04.12.",
       "writer": "자유시간 투자자",
       "title": "[Day 6] 시스템을 만드는 과정(8) : 온라인 임장 하는 법"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "7018",
-      "date": "2026.04.12.",
-      "writer": "독서맹수",
-      "title": "[Day 7] 독서맹수 / 세상에는 놀랄 일이 생긴다"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "7015",
-      "date": "2026.04.12.",
-      "writer": "jensnet",
-      "title": "[Day6] 부자가 되는 지름길 / 돈의 심리학"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "7011",
-      "date": "2026.04.12.",
-      "writer": "jensnet",
-      "title": "[Day5] 독서 나눔을 하고.."
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "7008",
-      "date": "2026.04.12.",
-      "writer": "토끼샘 권채민",
-      "title": "[Day4] 내 아이는 나와 다르게 키우고싶다:"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "7007",
-      "date": "2026.04.12.",
-      "writer": "토끼샘 권채민",
-      "title": "[Day 3] 공포의 순간"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6990",
-      "date": "2026.04.11.",
-      "writer": "독서맹수",
-      "title": "[Day 6] 독서맹수 / 적당히 합리적인 것이 낫다"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6978",
-      "date": "2026.04.10.",
-      "writer": "독도군",
-      "title": "[Day 9]독도군 한지연 / 익숙한것들의 그림자"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6977",
-      "date": "2026.04.10.",
-      "writer": "야무진",
-      "title": "'값'을 치른다는 것"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6972",
-      "date": "2026.04.10.",
-      "writer": "나아가군",
-      "title": "[Day 6] 나아가군/ 울트라 마라톤"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6968",
-      "date": "2026.04.09.",
-      "writer": "깨어있군",
-      "title": "[Day 6] 깨어있군 / 인간관계의 타이밍"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6967",
-      "date": "2026.04.09.",
-      "writer": "독서맹수",
-      "title": "[Day 5] 독서맹수 /  부는 눈에 보이지 않는다"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6963",
-      "date": "2026.04.09.",
-      "writer": "자유시간 투자자",
-      "title": "[Day 5] 곧 석유가 고갈된다고 했지만, 우리는 아직도 잘 쓰고 있다"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6961",
-      "date": "2026.04.09.",
-      "writer": "독하군 최영웅",
-      "title": "[Day 8] 일상을 갖게 된 부자 / 최영웅 소령, 독하군 독서모임"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6960",
-      "date": "2026.04.09.",
-      "writer": "깨어있군",
-      "title": "[Day 5] 깨어있군 / '부'란 무엇인가?"
-    },
-    {
-      "menu": "37",
-      "page": 6,
-      "article_number": "6955",
-      "date": "2026.04.09.",
-      "writer": "jensnet",
-      "title": "[Day4] \"부\"가 가진 본질적 의미 / 돈의 심리학"
     },
     {
       "menu": "37",
