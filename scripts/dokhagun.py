@@ -10,13 +10,22 @@ from pathlib import Path
 import time
 import pandas as pd
 import json
+import sys
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
 
 START_DATE = "2026-03-30"
 END_DATE = "2026-04-26"
 
-CSV_PATH  = "data/result.csv"
-JSON_PATH = "data/result.json"
-JS_PATH   = "data/result.js"
+OUTPUT_DIR = Path("data")
+OUTPUT_DIR.mkdir(exist_ok=True)
+
+CSV_PATH  = OUTPUT_DIR / "result.csv"
+JSON_PATH = OUTPUT_DIR / "result.json"
+JS_PATH   = OUTPUT_DIR / "result.js"
 
 base_urls = [
     "https://cafe.naver.com/f-e/cafes/30948335/menus/37",
