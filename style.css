@@ -143,6 +143,41 @@ body {
     background: #fcfdfe;
   }
 
+  /* 주차별 배경색 구분 - 더 명확한 파스텔톤 */
+  .week-row-1 { background-color: #ffffff !important; } /* 흰색 */
+  .week-row-2 { background-color: #f0f7ff !important; } /* 연한 파랑 */
+  .week-row-3 { background-color: #fff9f0 !important; } /* 연한 주황 */
+  .week-row-4 { background-color: #f3fff0 !important; } /* 연한 초록 */
+  .week-row-5 { background-color: #fff0f5 !important; } /* 연한 핑크 */
+  .week-row-6 { background-color: #f5f0ff !important; } /* 연한 보라 */
+
+  .legend {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #666;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+  }
+
   /* 테이블 컬럼 너비 조정 (1.5 : 1.5 : 7 비율 근사) */
   th:nth-child(1), td:nth-child(1) { width: 20%; text-align: center; } /* 날짜 */
   th:nth-child(2), td:nth-child(2) { width: 20%; text-align: center; } /* 작성자 */

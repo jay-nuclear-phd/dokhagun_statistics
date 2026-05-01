@@ -29,6 +29,8 @@
       </div>
     </section>
 
+    <div id="colorLegend" class="legend"></div>
+
     <table>
       <thead>
         <tr>
@@ -142,6 +144,19 @@
         <button class="toggle-btn ${idx === 0 ? 'active' : ''}" onclick="changePeriod(${idx})">
           ${week.name}
         </button>
+      `).join("");
+
+      updateColorLegend();
+    }
+
+    function updateColorLegend() {
+      const legendDiv = document.getElementById("colorLegend");
+      // "이번 달"을 제외한 실제 주차들만 범례에 표시 (1주차부터)
+      legendDiv.innerHTML = weeks.slice(1).map((week, idx) => `
+        <div class="legend-item">
+          <div class="legend-color week-row-${idx + 1}"></div>
+          <span>${week.name}</span>
+        </div>
       `).join("");
     }
 
@@ -369,6 +384,20 @@
       renderTable();
     }
 
+    function getWeekIdx(dateStr) {
+      if (!dateStr) return -1;
+      const [y, m, d] = dateStr.split('.').map(s => parseInt(s.trim(), 10));
+      const postDate = new Date(y, m - 1, d);
+      
+      // 0번째는 "이번 달"이므로 실제 주차는 1부터 시작
+      for (let i = 1; i < weeks.length; i++) {
+        if (postDate >= weeks[i].start && postDate <= weeks[i].end) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
     function renderTable() {
       const tbody = document.getElementById("tableBody");
       const targetWeek = weeks[activeWeekIdx];
@@ -404,13 +433,18 @@
         return;
       }
 
-      tbody.innerHTML = filtered.map(item => `
-        <tr>
-          <td>${escapeHtml(item.date)}</td>
-          <td>${escapeHtml(item.writer)}</td>
-          <td style="text-align: left;">${escapeHtml(item.title)}</td>
-        </tr>
-      `).join("");
+      tbody.innerHTML = filtered.map(item => {
+        const weekIdx = getWeekIdx(item.date);
+        const weekClass = weekIdx !== -1 ? `week-row-${weekIdx}` : '';
+        
+        return `
+          <tr class="${weekClass}">
+            <td>${escapeHtml(item.date)}</td>
+            <td>${escapeHtml(item.writer)}</td>
+            <td style="text-align: left;">${escapeHtml(item.title)}</td>
+          </tr>
+        `;
+      }).join("");
     }
 
     function escapeHtml(value) {
