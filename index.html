@@ -36,8 +36,32 @@
     <table>
       <thead>
         <tr>
-          <th>날짜</th>
-          <th>작성자</th>
+          <th class="sortable desc">
+            <div class="header-content" onclick="handleSort('date', this.parentElement)">
+              <span>날짜</span>
+              <button class="filter-trigger" onclick="toggleFilter('date', event)">필터 ▾</button>
+            </div>
+            <div id="dateFilterDropdown" class="filter-dropdown" onclick="event.stopPropagation()">
+              <div class="filter-actions">
+                <button onclick="selectAll('date', true)">모두 선택</button>
+                <button onclick="selectAll('date', false)">모두 해제</button>
+              </div>
+              <div id="dateFilterList" class="filter-list"></div>
+            </div>
+          </th>
+          <th class="sortable">
+            <div class="header-content" onclick="handleSort('writer', this.parentElement)">
+              <span>작성자</span>
+              <button class="filter-trigger" onclick="toggleFilter('writer', event)">필터 ▾</button>
+            </div>
+            <div id="writerFilterDropdown" class="filter-dropdown" onclick="event.stopPropagation()">
+              <div class="filter-actions">
+                <button onclick="selectAll('writer', true)">모두 선택</button>
+                <button onclick="selectAll('writer', false)">모두 해제</button>
+              </div>
+              <div id="writerFilterList" class="filter-list"></div>
+            </div>
+          </th>
           <th>제목</th>
         </tr>
       </thead>
@@ -50,6 +74,13 @@
     let myChart = null;
     let weeks = []; // { name, start, end }
     let activeWeekIdx = 0;
+    
+    // 정렬 및 필터 상태 관리
+    let sortConfig = { key: 'date', direction: 'desc' };
+    let filters = {
+      date: new Set(),
+      writer: new Set()
+    };
 
     async function loadData() {
       const updatedAtEl = document.getElementById("updatedAt");
@@ -254,33 +285,134 @@
       }
     }
 
-    function renderTable() {
-      const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
-      const tbody = document.getElementById("tableBody");
+    function toggleFilter(key, event) {
+      event.stopPropagation();
+      const dropdown = document.getElementById(`${key}FilterDropdown`);
+      const isShow = dropdown.classList.contains('show');
+      
+      // 모든 드롭다운 닫기
+      document.querySelectorAll('.filter-dropdown').forEach(d => d.classList.remove('show'));
+      
+      if (!isShow) {
+        populateFilterList(key);
+        dropdown.classList.add('show');
+      }
+    }
 
+    function populateFilterList(key) {
+      const listDiv = document.getElementById(`${key}FilterList`);
+      const targetWeek = weeks[activeWeekIdx];
+      
+      // 현재 선택된 주차에 해당하는 고유값만 추출
+      const uniqueValues = [...new Set(allItems
+        .filter(item => {
+          if (!item.date) return false;
+          const [y, m, d] = item.date.split('.').map(s => parseInt(s.trim(), 10));
+          const postDate = new Date(y, m - 1, d);
+          return postDate >= targetWeek.start && postDate <= targetWeek.end;
+        })
+        .map(item => String(item[key] || ""))
+      )].sort();
+
+      // 필터 상태 초기화 (처음 열 때 모든 값이 Set에 없으면 모두 선택된 것으로 간주)
+      if (filters[key].size === 0) {
+        uniqueValues.forEach(v => filters[key].add(v));
+      }
+
+      listDiv.innerHTML = uniqueValues.map(val => `
+        <label class="filter-item">
+          <input type="checkbox" ${filters[key].has(val) ? 'checked' : ''} 
+            onchange="handleFilterChange('${key}', '${val}', this.checked)" />
+          ${escapeHtml(val)}
+        </label>
+      `).join("");
+    }
+
+    function handleFilterChange(key, value, checked) {
+      if (checked) {
+        filters[key].add(value);
+      } else {
+        filters[key].delete(value);
+      }
+      renderTable();
+    }
+
+    function selectAll(key, checked) {
+      const listDiv = document.getElementById(`${key}FilterList`);
+      const checkboxes = listDiv.querySelectorAll('input[type="checkbox"]');
+      
+      checkboxes.forEach(cb => {
+        cb.checked = checked;
+        const val = cb.parentElement.textContent.trim();
+        if (checked) filters[key].add(val);
+        else filters[key].delete(val);
+      });
+      
+      renderTable();
+    }
+
+    // 문서 클릭 시 드롭다운 닫기
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.filter-dropdown').forEach(d => d.classList.remove('show'));
+    });
+
+    function handleSort(key, el) {
+      if (sortConfig.key === key) {
+        sortConfig.direction = sortConfig.direction === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortConfig.key = key;
+        sortConfig.direction = 'asc';
+      }
+
+      // UI 표시 업데이트
+      document.querySelectorAll('.sortable').forEach(th => {
+        th.classList.remove('asc', 'desc');
+      });
+      el.classList.add(sortConfig.direction);
+
+      renderTable();
+    }
+
+    function renderTable() {
+      const globalKeyword = document.getElementById("searchInput").value.trim().toLowerCase();
+      const tbody = document.getElementById("tableBody");
       const targetWeek = weeks[activeWeekIdx];
 
-      const filtered = allItems.filter(item => {
-        // 날짜 필터링
+      let filtered = allItems.filter(item => {
+        // 1. 기간 필터링
         if (!item.date) return false;
         const [y, m, d] = item.date.split('.').map(s => parseInt(s.trim(), 10));
         const postDate = new Date(y, m - 1, d);
-        const matchPeriod = postDate >= targetWeek.start && postDate <= targetWeek.end;
+        if (!(postDate >= targetWeek.start && postDate <= targetWeek.end)) return false;
 
-        // 검색어 필터링
-        const matchKeyword =
-          !keyword ||
-          String(item.writer || "").toLowerCase().includes(keyword) ||
-          String(item.title || "").toLowerCase().includes(keyword);
+        // 2. 통합 검색 필터링
+        const matchGlobal = !globalKeyword || 
+          String(item.writer || "").toLowerCase().includes(globalKeyword) || 
+          String(item.title || "").toLowerCase().includes(globalKeyword);
+        if (!matchGlobal) return false;
 
-        return matchPeriod && matchKeyword;
+        // 3. 컬럼별 체크박스 필터링
+        const valDate = String(item.date || "");
+        const valWriter = String(item.writer || "");
+        
+        // 필터가 비어있지 않은 경우에만 체크 (비어있으면 해당 주차의 모든 값이 선택된 상태로 populate에서 처리됨)
+        const matchDate = filters.date.size === 0 || filters.date.has(valDate);
+        const matchWriter = filters.writer.size === 0 || filters.writer.has(valWriter);
+        
+        return matchDate && matchWriter;
       });
 
-      // 날짜 기준 내림차순 정렬 (최신순)
-      filtered.sort((a, b) => b.date.localeCompare(a.date));
+      // 정렬 적용
+      filtered.sort((a, b) => {
+        let valA = String(a[sortConfig.key] || "");
+        let valB = String(b[sortConfig.key] || "");
+        
+        let comparison = valA.localeCompare(valB);
+        return sortConfig.direction === 'asc' ? comparison : -comparison;
+      });
 
       if (filtered.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; padding: 40px; color: #999;">검색 결과가 없습니다.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; padding: 40px; color: #999;">결과가 없습니다.</td></tr>`;
         return;
       }
 
@@ -288,7 +420,7 @@
         <tr>
           <td>${escapeHtml(item.date)}</td>
           <td>${escapeHtml(item.writer)}</td>
-          <td>${escapeHtml(item.title)}</td>
+          <td style="text-align: left;">${escapeHtml(item.title)}</td>
         </tr>
       `).join("");
     }
