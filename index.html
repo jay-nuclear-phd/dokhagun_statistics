@@ -2,15 +2,18 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <title>네이버 카페 4월 글 수집 현황</title>
+  <title id="pageTitle">독하군 카페 글쓰기 현황</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="./dokhagun.png" />
   <link rel="stylesheet" href="./style.css" />
+  <script src="./data/result.js"></script>
 </head>
 <body>
   <main>
-    <h1>네이버 카페 4월 글 수집 현황</h1>
+    <h1 id="mainHeading">독하군 카페 글쓰기 현황</h1>
 
     <section class="summary">
+      <p>수집 기간: <span id="period">-</span></p>
       <p>업데이트 시각: <span id="updatedAt">불러오는 중...</span></p>
       <p>수집 글 수: <span id="count">-</span></p>
     </section>
@@ -19,10 +22,6 @@
       <input id="searchInput" type="text" placeholder="작성자 또는 제목 검색" />
       <select id="menuFilter">
         <option value="">전체 메뉴</option>
-        <option value="37">메뉴 37</option>
-        <option value="38">메뉴 38</option>
-        <option value="39">메뉴 39</option>
-        <option value="40">메뉴 40</option>
       </select>
     </section>
 
@@ -45,19 +44,90 @@
     let allItems = [];
 
     async function loadData() {
-      const res = await fetch("./data/result.json?ts=" + Date.now());
-      const data = await res.json();
+      const updatedAtEl = document.getElementById("updatedAt");
+      
+      // 1. 먼저 window.naverCafeData가 있는지 확인 (result.js를 통해 로드된 경우)
+      if (window.naverCafeData) {
+        processData(window.naverCafeData);
+        return;
+      }
 
+      // 2. 없으면 fetch 시도 (서버 환경인 경우)
+      try {
+        const res = await fetch("./data/result.json?ts=" + Date.now());
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        
+        const data = await res.json();
+        processData(data);
+      } catch (error) {
+        console.error("데이터 로드 실패:", error);
+        updatedAtEl.textContent = "불러오기 실패 (CORS 또는 파일 없음)";
+        updatedAtEl.style.color = "red";
+      }
+    }
+
+    function processData(data) {
       allItems = data.items || [];
 
       document.getElementById("updatedAt").textContent = data.updated_at || "-";
       document.getElementById("count").textContent = data.count || allItems.length;
 
+      if (data.start_date && data.end_date) {
+        document.getElementById("period").textContent = `${data.start_date} ~ ${data.end_date}`;
+      }
+
+      updateTitles();
+      updateMenuFilter();
       renderTable();
     }
 
+    function updateTitles() {
+      if (allItems.length === 0) return;
+
+      const yearCount = {};
+      const monthCount = {};
+
+      allItems.forEach(item => {
+        if (!item.date) return;
+        // 날짜 형식: "2026.04.26."
+        const parts = item.date.split('.');
+        if (parts.length >= 2) {
+          const year = parts[0].trim();
+          const month = parseInt(parts[1], 10);
+          if (year) yearCount[year] = (yearCount[year] || 0) + 1;
+          if (!isNaN(month)) monthCount[month] = (monthCount[month] || 0) + 1;
+        }
+      });
+
+      const bestYear = Object.keys(yearCount).reduce((a, b) => (yearCount[a] > yearCount[b] ? a : b), "");
+      const bestMonth = Object.keys(monthCount).reduce((a, b) => (monthCount[a] > monthCount[b] ? a : b), "");
+
+      if (bestYear && bestMonth) {
+        const titleText = `독하군 카페 ${bestYear}년 ${bestMonth}월 모임 글쓰기 현황`;
+        document.getElementById("pageTitle").textContent = titleText;
+        document.getElementById("mainHeading").textContent = titleText;
+      }
+    }
+
+    function updateMenuFilter() {
+      const menuFilter = document.getElementById("menuFilter");
+      const menus = [...new Set(allItems.map(item => String(item.menu)))]
+        .filter(m => m && m !== "undefined")
+        .sort((a, b) => Number(a) - Number(b));
+      
+      const currentValue = menuFilter.value;
+      menuFilter.innerHTML = '<option value="">전체 메뉴</option>';
+      menus.forEach(menu => {
+        const option = document.createElement("option");
+        option.value = menu;
+        option.textContent = `메뉴 ${menu}`;
+        menuFilter.appendChild(option);
+      });
+      menuFilter.value = currentValue;
+    }
+
     function renderTable() {
-      const keyword = document.getElementById("searchInput").value.trim();
+      const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
       const menu = document.getElementById("menuFilter").value;
       const tbody = document.getElementById("tableBody");
 
@@ -65,11 +135,16 @@
         const matchMenu = !menu || String(item.menu) === menu;
         const matchKeyword =
           !keyword ||
-          String(item.writer).includes(keyword) ||
-          String(item.title).includes(keyword);
+          String(item.writer || "").toLowerCase().includes(keyword) ||
+          String(item.title || "").toLowerCase().includes(keyword);
 
         return matchMenu && matchKeyword;
       });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; padding: 40px; color: #999;">검색 결과가 없습니다.</td></tr>`;
+        return;
+      }
 
       tbody.innerHTML = filtered.map(item => `
         <tr>
@@ -84,12 +159,13 @@
     }
 
     function escapeHtml(value) {
-      return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
+      if (value === null || value === undefined) return "";
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
     }
 
     document.getElementById("searchInput").addEventListener("input", renderTable);

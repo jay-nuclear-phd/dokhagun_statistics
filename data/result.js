@@ -1,4 +1,4 @@
-{
+window.naverCafeData = {
   "updated_at": "2026-05-01 10:19:22",
   "start_date": "2026-03-30",
   "end_date": "2026-04-26",
@@ -3357,4 +3357,4 @@
       "title": "Minority의 삶. 4화 : 리액션 꿀팁, 텍로하 즐기기"
     }
   ]
-}
+};

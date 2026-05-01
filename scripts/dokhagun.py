@@ -4,38 +4,48 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
+from pathlib import Path
 import time
+import pandas as pd
 import json
 
+START_DATE = "2026-03-30"
+END_DATE = "2026-04-26"
 
-BASE_URLS = [
+CSV_PATH  = "data/result.csv"
+JSON_PATH = "data/result.json"
+JS_PATH   = "data/result.js"
+
+base_urls = [
     "https://cafe.naver.com/f-e/cafes/30948335/menus/37",
     "https://cafe.naver.com/f-e/cafes/30948335/menus/38",
     "https://cafe.naver.com/f-e/cafes/30948335/menus/39",
     "https://cafe.naver.com/f-e/cafes/30948335/menus/40",
+    "https://cafe.naver.com/f-e/cafes/30948335/menus/61",
 ]
 
-TARGET_YEAR = "2026"
-TARGET_MONTH = "04"
-STOP_MONTH = "03"
+start_dt = datetime.strptime(START_DATE, "%Y-%m-%d").date()
+end_dt = datetime.strptime(END_DATE, "%Y-%m-%d").date()
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "data"
-DATA_DIR.mkdir(exist_ok=True)
-OUT_JSON = DATA_DIR / "result.json"
+if start_dt > end_dt:
+    raise ValueError("START_DATE는 END_DATE보다 늦을 수 없습니다.")
+
+def parse_naver_date(date_text):
+    clean = date_text.strip().replace(" ", "")
+
+    try:
+        return datetime.strptime(clean, "%Y.%m.%d.").date()
+    except ValueError:
+        return None
 
 options = Options()
 options.add_argument("--start-maximized")
-
-# 처음 로그인할 때 사용한 Selenium 전용 크롬 프로필
 options.add_argument(r"--user-data-dir=C:\selenium-naver-profile")
 
 driver = webdriver.Chrome(options=options)
 wait = WebDriverWait(driver, 15)
-
 
 def wait_board_loaded():
     wait.until(
@@ -43,7 +53,6 @@ def wait_board_loaded():
             (By.CSS_SELECTOR, "table.article-table tbody tr")
         )
     )
-
 
 def check_login():
     time.sleep(3)
@@ -65,7 +74,6 @@ def collect_current_page(menu_no, page_no):
     stop = False
 
     for row in rows:
-        # 필독/공지 제외: 숫자 게시글 번호가 있는 행만 수집
         article_number_el = row.select_one("td.td_normal.type_articleNumber")
 
         if not article_number_el:
@@ -84,26 +92,29 @@ def collect_current_page(menu_no, page_no):
             continue
 
         writer = writer_el.get_text(strip=True)
-        date = date_el.get_text(strip=True)
+        date_text = date_el.get_text(strip=True)
         title = title_el.get_text(" ", strip=True) if title_el else ""
 
-        clean_date = date.replace(" ", "")
+        post_date = parse_naver_date(date_text)
 
-        # 3월이 나오면 해당 메뉴 수집 종료
-        if clean_date.startswith(f"{TARGET_YEAR}.{STOP_MONTH}."):
+        if post_date is None:
+            continue
+
+        if post_date > end_dt:
+            continue
+
+        if post_date < start_dt:
             stop = True
             break
 
-        # 4월 데이터만 저장
-        if clean_date.startswith(f"{TARGET_YEAR}.{TARGET_MONTH}."):
-            results.append({
-                "menu": menu_no,
-                "page": page_no,
-                "article_number": article_number,
-                "date": date,
-                "writer": writer,
-                "title": title
-            })
+        results.append({
+            "menu": menu_no,
+            "page": page_no,
+            "article_number": article_number,
+            "date": date_text,
+            "writer": writer,
+            "title": title
+        })
 
     return results, stop
 
@@ -130,9 +141,13 @@ def collect_menu(menu_url):
 
     print("=" * 60)
     print(f"메뉴 {menu_no} 수집 시작")
+    print(menu_url)
     print("=" * 60)
 
-    driver.get(menu_url + "?viewType=L")
+    target_url = menu_url + "?viewType=L"
+
+    driver.get(target_url)
+
     check_login()
     wait_board_loaded()
 
@@ -148,7 +163,7 @@ def collect_menu(menu_url):
         print(f"메뉴 {menu_no} / {page_no}페이지 수집 개수: {len(page_results)}")
 
         if stop:
-            print(f"메뉴 {menu_no}: {STOP_MONTH}월 데이터가 나와서 종료")
+            print(f"메뉴 {menu_no}: {START_DATE}보다 과거 데이터가 나와서 이 메뉴 수집을 종료합니다.")
             break
 
         page_no += 1
@@ -156,7 +171,7 @@ def collect_menu(menu_url):
         try:
             click_page(page_no)
         except Exception as e:
-            print(f"메뉴 {menu_no}: {page_no}페이지 버튼을 찾지 못해서 종료")
+            print(f"메뉴 {menu_no}: {page_no}페이지 버튼을 찾지 못했습니다. 이 메뉴 수집 종료.")
             print(e)
             break
 
@@ -166,22 +181,33 @@ def collect_menu(menu_url):
 all_results = []
 
 try:
-    for url in BASE_URLS:
-        all_results.extend(collect_menu(url))
+    for url in base_urls:
+        menu_results = collect_menu(url)
+        all_results.extend(menu_results)
+
+finally:
+    df = pd.DataFrame(all_results)
+    df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
+    print(f"CSV 저장 완료: {CSV_PATH}")
 
     updated_at = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d %H:%M:%S")
 
     payload = {
         "updated_at": updated_at,
-        "target": f"{TARGET_YEAR}-{TARGET_MONTH}",
+        "start_date": START_DATE,
+        "end_date": END_DATE,
         "count": len(all_results),
         "items": all_results
     }
 
-    with OUT_JSON.open("w", encoding="utf-8") as f:
+    with JSON_PATH.open("w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
-    print(f"저장 완료: {OUT_JSON}")
+    print(f"JSON 저장 완료: {JSON_PATH}")
 
-finally:
+    # result.js 저장 (로컬 CORS 회피용)
+    with Path(JS_PATH).open("w", encoding="utf-8") as f:
+        f.write(f"window.naverCafeData = {json.dumps(payload, ensure_ascii=False, indent=2)};")
+    print(f"JS 저장 완료: {JS_PATH}")
+
     driver.quit()
