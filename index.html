@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="./dokhagun.png" />
   <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./data/result.js"></script>
 </head>
 <body>
@@ -13,9 +14,19 @@
     <h1 id="mainHeading">독하군 카페 글쓰기 현황</h1>
 
     <section class="summary">
-      <p>수집 기간: <span id="period">-</span></p>
-      <p>업데이트 시각: <span id="updatedAt">불러오는 중...</span></p>
-      <p>수집 글 수: <span id="count">-</span></p>
+      <div class="summary-left">
+        <span id="monthLabel">모임</span>: <span id="period">-</span>
+      </div>
+      <div class="summary-right">
+        업데이트 시각: <span id="updatedAt">불러오는 중...</span>
+      </div>
+    </section>
+
+    <section class="chart-container">
+      <div id="weekToggles" class="toggles"></div>
+      <div class="canvas-wrapper">
+        <canvas id="activityChart"></canvas>
+      </div>
     </section>
 
     <section class="filters">
@@ -42,21 +53,20 @@
 
   <script>
     let allItems = [];
+    let myChart = null;
+    let weeks = []; // { name, start, end }
 
     async function loadData() {
       const updatedAtEl = document.getElementById("updatedAt");
       
-      // 1. 먼저 window.naverCafeData가 있는지 확인 (result.js를 통해 로드된 경우)
       if (window.naverCafeData) {
         processData(window.naverCafeData);
         return;
       }
 
-      // 2. 없으면 fetch 시도 (서버 환경인 경우)
       try {
         const res = await fetch("./data/result.json?ts=" + Date.now());
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-        
         const data = await res.json();
         processData(data);
       } catch (error) {
@@ -68,17 +78,117 @@
 
     function processData(data) {
       allItems = data.items || [];
-
       document.getElementById("updatedAt").textContent = data.updated_at || "-";
-      document.getElementById("count").textContent = data.count || allItems.length;
 
       if (data.start_date && data.end_date) {
         document.getElementById("period").textContent = `${data.start_date} ~ ${data.end_date}`;
+        setupWeeks(data.start_date, data.end_date);
       }
 
       updateTitles();
       updateMenuFilter();
+      initChart();
       renderTable();
+    }
+
+    function setupWeeks(startStr, endStr) {
+      const start = new Date(startStr);
+      const end = new Date(endStr);
+      weeks = [{ name: "이번 달", start: new Date(start), end: new Date(end) }];
+
+      let currentStart = new Date(start);
+      let weekNum = 1;
+
+      while (currentStart <= end) {
+        let currentEnd = new Date(currentStart);
+        currentEnd.setDate(currentEnd.getDate() + 6); // 월~일 (7일)
+        
+        // 실제 데이터 범위 내에서만
+        const actualEnd = currentEnd > end ? new Date(end) : currentEnd;
+        
+        weeks.push({
+          name: `${weekNum}주차`,
+          start: new Date(currentStart),
+          end: actualEnd
+        });
+
+        currentStart.setDate(currentStart.getDate() + 7);
+        weekNum++;
+      }
+
+      const togglesDiv = document.getElementById("weekToggles");
+      togglesDiv.innerHTML = weeks.map((week, idx) => `
+        <button class="toggle-btn ${idx === 0 ? 'active' : ''}" onclick="updateChart(${idx})">
+          ${week.name}
+        </button>
+      `).join("");
+    }
+
+    function initChart() {
+      updateChart(0); // 기본값: 이번 달
+    }
+
+    function updateChart(weekIdx) {
+      // 버튼 활성화 표시
+      const btns = document.querySelectorAll(".toggle-btn");
+      btns.forEach((btn, i) => {
+        btn.classList.toggle("active", i === weekIdx);
+      });
+
+      const targetWeek = weeks[weekIdx];
+      const filtered = allItems.filter(item => {
+        if (!item.date) return false;
+        const [y, m, d] = item.date.split('.').map(s => parseInt(s.trim(), 10));
+        const postDate = new Date(y, m - 1, d);
+        return postDate >= targetWeek.start && postDate <= targetWeek.end;
+      });
+
+      // 작성자별 글 수 계산
+      const stats = {};
+      filtered.forEach(item => {
+        stats[item.writer] = (stats[item.writer] || 0) + 1;
+      });
+
+      // 이름순(가나다순) 정렬
+      const sortedWriters = Object.entries(stats)
+        .sort((a, b) => a[0].localeCompare(b[0]));
+
+      const labels = sortedWriters.map(s => s[0]);
+      const dataValues = sortedWriters.map(s => s[1]);
+
+      const ctx = document.getElementById('activityChart').getContext('2d');
+      
+      if (myChart) {
+        myChart.destroy();
+      }
+
+      myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: '작성 글 수',
+            data: dataValues,
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { stepSize: 1 }
+            }
+          },
+          plugins: {
+            legend: { display: false }
+          }
+        }
+      });
     }
 
     function updateTitles() {
@@ -106,6 +216,7 @@
         const titleText = `독하군 카페 ${bestYear}년 ${bestMonth}월 모임 글쓰기 현황`;
         document.getElementById("pageTitle").textContent = titleText;
         document.getElementById("mainHeading").textContent = titleText;
+        document.getElementById("monthLabel").textContent = `${bestMonth}월 모임`;
       }
     }
 
