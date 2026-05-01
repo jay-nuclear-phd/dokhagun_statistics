@@ -202,14 +202,20 @@ body {
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    min-width: 160px;
-    max-height: 300px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    min-width: 220px;
+    max-height: 350px;
     overflow-y: auto;
-    padding: 12px;
-    text-align: left;
-    font-weight: normal;
-    text-transform: none;
+    padding: 16px;
+    /* 모든 종류의 중앙 정렬 차단 */
+    text-align: left !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+    box-sizing: border-box;
+  }
+
+  .filter-dropdown * {
+    box-sizing: border-box;
   }
 
   .filter-dropdown.show {
@@ -219,44 +225,64 @@ body {
   .filter-actions {
     display: flex;
     gap: 8px;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #eee;
   }
 
   .filter-actions button {
     flex: 1;
-    padding: 4px;
+    padding: 6px;
     font-size: 11px;
     cursor: pointer;
     background: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 4px;
-  }
-
-  .filter-actions button:hover {
-    background: #eef1f5;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
   }
 
   .filter-list {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .filter-item {
-    display: flex;
+    display: grid !important; /* 그리드 레이아웃 강제 */
+    grid-template-columns: 24px 1fr; /* 체크박스 공간 24px 고정, 나머지는 텍스트 */
     align-items: center;
-    gap: 8px;
-    font-size: 13px;
+    width: 100%;
+    padding: 6px 0;
     cursor: pointer;
-    white-space: nowrap;
+    color: #333;
+    border: none;
+    text-align: left !important;
   }
 
-  .filter-item input {
-    width: 14px;
-    height: 14px;
-    margin: 0;
+  .filter-item:hover {
+    background-color: #f0f7ff;
+    color: #007bff;
+  }
+
+  .filter-item input[type="checkbox"] {
+    grid-column: 1; /* 첫 번째 칸 고정 */
+    width: 16px;
+    height: 16px;
+    margin: 0 !important;
+    padding: 0 !important;
     cursor: pointer;
+    justify-self: start; /* 칸 내에서도 무조건 왼쪽 */
+  }
+
+  .filter-item span {
+    grid-column: 2; /* 두 번째 칸 고정 */
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   

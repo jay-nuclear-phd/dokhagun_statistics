@@ -319,7 +319,7 @@
         <label class="filter-item">
           <input type="checkbox" ${filters[key].has(val) ? 'checked' : ''} 
             onchange="handleFilterChange('${key}', '${val}', this.checked)" />
-          ${escapeHtml(val)}
+          <span>${escapeHtml(val)}</span>
         </label>
       `).join("");
     }
