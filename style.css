@@ -151,29 +151,18 @@ body {
   .week-row-5 { background-color: #fff0f5 !important; } /* 연한 핑크 */
   .week-row-6 { background-color: #f5f0ff !important; } /* 연한 보라 */
 
-  .filter-search-wrapper {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .filter-search {
-    width: 100%;
-    padding: 6px 10px;
-    font-size: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    outline: none;
-  }
-
-  .filter-search:focus {
-    border-color: #007bff;
+  .table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
   .legend {
     display: flex;
     gap: 15px;
-    margin-bottom: 12px;
     padding: 10px 16px;
     background: #fff;
     border-radius: 8px;
@@ -182,6 +171,31 @@ body {
     font-size: 12px;
     color: #666;
     box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    margin-bottom: 0; /* table-controls 내부에서는 마진 제거 */
+  }
+
+  .search-wrapper {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #writerSearchInput {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.2s;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  #writerSearchInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
   }
 
   .legend-item {

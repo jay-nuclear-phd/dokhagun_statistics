@@ -29,7 +29,12 @@
       </div>
     </section>
 
-    <div id="colorLegend" class="legend"></div>
+    <div class="table-controls">
+      <div id="colorLegend" class="legend"></div>
+      <div class="search-wrapper">
+        <input type="text" id="writerSearchInput" placeholder="작성자를 입력하세요..." oninput="renderTable()" />
+      </div>
+    </div>
 
     <table>
       <thead>
@@ -40,9 +45,6 @@
               <button class="filter-trigger" onclick="toggleFilter('date', event)">필터 ▾</button>
             </div>
             <div id="dateFilterDropdown" class="filter-dropdown" onclick="event.stopPropagation()">
-              <div class="filter-search-wrapper">
-                <input type="text" class="filter-search" placeholder="날짜 검색..." oninput="filterFilterList('date', this.value)" />
-              </div>
               <div class="filter-actions">
                 <button onclick="selectAll('date', true)">모두 선택</button>
                 <button onclick="selectAll('date', false)">모두 해제</button>
@@ -56,9 +58,6 @@
               <button class="filter-trigger" onclick="toggleFilter('writer', event)">필터 ▾</button>
             </div>
             <div id="writerFilterDropdown" class="filter-dropdown" onclick="event.stopPropagation()">
-              <div class="filter-search-wrapper">
-                <input type="text" class="filter-search" placeholder="작성자 검색..." oninput="filterFilterList('writer', this.value)" />
-              </div>
               <div class="filter-actions">
                 <button onclick="selectAll('writer', true)">모두 선택</button>
                 <button onclick="selectAll('writer', false)">모두 해제</button>
@@ -171,6 +170,7 @@
 
     function updateColorLegend() {
       const legendDiv = document.getElementById("colorLegend");
+      // "이번 달"을 제외한 실제 주차들만 범례에 표시 (1주차부터)
       legendDiv.innerHTML = weeks.slice(1).map((week, idx) => `
         <div class="legend-item">
           <div class="legend-color week-row-${idx + 1}"></div>
@@ -320,7 +320,7 @@
       }
     }
 
-    function populateFilterList(key, searchTerm = "") {
+    function populateFilterList(key) {
       const listDiv = document.getElementById(`${key}FilterList`);
       const targetWeek = weeks[activeWeekIdx];
       
@@ -333,25 +333,17 @@
         .map(item => String(item[key] || ""))
       )].sort();
 
-      if (filters[key].size === 0 && searchTerm === "") {
+      if (filters[key].size === 0) {
         uniqueValues.forEach(v => filters[key].add(v));
       }
 
-      const filteredValues = uniqueValues.filter(val => 
-        val.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-
-      listDiv.innerHTML = filteredValues.map(val => `
+      listDiv.innerHTML = uniqueValues.map(val => `
         <label class="filter-item">
           <input type="checkbox" ${filters[key].has(val) ? 'checked' : ''} 
             onchange="handleFilterChange('${key}', '${val}', this.checked)" />
           <span>${escapeHtml(val)}</span>
         </label>
       `).join("");
-    }
-
-    function filterFilterList(key, value) {
-      populateFilterList(key, value);
     }
 
     function handleFilterChange(key, value, checked) {
@@ -412,6 +404,7 @@
     function renderTable() {
       const tbody = document.getElementById("tableBody");
       const targetWeek = weeks[activeWeekIdx];
+      const writerSearchTerm = document.getElementById("writerSearchInput").value.trim().toLowerCase();
 
       let filtered = allItems.filter(item => {
         // 1. 기간 필터링
@@ -419,9 +412,15 @@
         if (!postDate) return false;
         if (!(postDate >= targetWeek.start && postDate <= targetWeek.end)) return false;
 
-        // 2. 컬럼별 체크박스 필터링
+        // 2. 작성자 이름 검색 필터링
+        if (writerSearchTerm && !String(item.writer || "").toLowerCase().includes(writerSearchTerm)) {
+          return false;
+        }
+
+        // 3. 컬럼별 체크박스 필터링
         const valDate = String(item.date || "");
         const valWriter = String(item.writer || "");
+        
         const matchDate = filters.date.size === 0 || filters.date.has(valDate);
         const matchWriter = filters.writer.size === 0 || filters.writer.has(valWriter);
         
