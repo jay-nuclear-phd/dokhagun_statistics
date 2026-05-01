@@ -144,12 +144,31 @@ body {
   }
 
   /* 주차별 배경색 구분 - 더 명확한 파스텔톤 */
-  .week-row-1 { background-color: #ffffff !important; } /* 흰색 */
+  .week-row-1 { background-color: #fffde0 !important; } /* 연한 노랑 */
   .week-row-2 { background-color: #f0f7ff !important; } /* 연한 파랑 */
   .week-row-3 { background-color: #fff9f0 !important; } /* 연한 주황 */
   .week-row-4 { background-color: #f3fff0 !important; } /* 연한 초록 */
   .week-row-5 { background-color: #fff0f5 !important; } /* 연한 핑크 */
   .week-row-6 { background-color: #f5f0ff !important; } /* 연한 보라 */
+
+  .filter-search-wrapper {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .filter-search {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .filter-search:focus {
+    border-color: #007bff;
+  }
 
   .legend {
     display: flex;

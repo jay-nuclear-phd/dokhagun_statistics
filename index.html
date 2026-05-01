@@ -40,6 +40,9 @@
               <button class="filter-trigger" onclick="toggleFilter('date', event)">필터 ▾</button>
             </div>
             <div id="dateFilterDropdown" class="filter-dropdown" onclick="event.stopPropagation()">
+              <div class="filter-search-wrapper">
+                <input type="text" class="filter-search" placeholder="날짜 검색..." oninput="filterFilterList('date', this.value)" />
+              </div>
               <div class="filter-actions">
                 <button onclick="selectAll('date', true)">모두 선택</button>
                 <button onclick="selectAll('date', false)">모두 해제</button>
@@ -53,6 +56,9 @@
               <button class="filter-trigger" onclick="toggleFilter('writer', event)">필터 ▾</button>
             </div>
             <div id="writerFilterDropdown" class="filter-dropdown" onclick="event.stopPropagation()">
+              <div class="filter-search-wrapper">
+                <input type="text" class="filter-search" placeholder="작성자 검색..." oninput="filterFilterList('writer', this.value)" />
+              </div>
               <div class="filter-actions">
                 <button onclick="selectAll('writer', true)">모두 선택</button>
                 <button onclick="selectAll('writer', false)">모두 해제</button>
@@ -79,6 +85,18 @@
       date: new Set(),
       writer: new Set()
     };
+
+    // 날짜 문자열을 로컬 Date 객체로 변환하는 헬퍼 (YYYY.MM.DD. 또는 YYYY-MM-DD 대응)
+    function parseLocalDate(dateStr) {
+      if (!dateStr) return null;
+      const parts = dateStr.split(/[-.]/).filter(p => p.trim() !== "");
+      if (parts.length < 3) return null;
+      const y = parseInt(parts[0], 10);
+      const m = parseInt(parts[1], 10);
+      const d = parseInt(parts[2], 10);
+      // 로컬 시간대의 자정으로 생성
+      return new Date(y, m - 1, d, 0, 0, 0, 0);
+    }
 
     async function loadData() {
       const updatedAtEl = document.getElementById("updatedAt");
@@ -115,8 +133,10 @@
     }
 
     function setupWeeks(startStr, endStr) {
-      const start = new Date(startStr);
-      const end = new Date(endStr);
+      const start = parseLocalDate(startStr);
+      const end = parseLocalDate(endStr);
+      
+      // "이번 달" 전체 범위
       weeks = [{ name: "이번 달", start: new Date(start), end: new Date(end) }];
 
       let currentStart = new Date(start);
@@ -126,13 +146,13 @@
         let currentEnd = new Date(currentStart);
         currentEnd.setDate(currentEnd.getDate() + 6); // 월~일 (7일)
         
-        // 실제 데이터 범위 내에서만
-        const actualEnd = currentEnd > end ? new Date(end) : currentEnd;
+        // 데이터 종료일을 넘지 않도록
+        const weekEnd = currentEnd > end ? new Date(end) : currentEnd;
         
         weeks.push({
           name: `${weekNum}주차`,
           start: new Date(currentStart),
-          end: actualEnd
+          end: new Date(weekEnd)
         });
 
         currentStart.setDate(currentStart.getDate() + 7);
@@ -151,7 +171,6 @@
 
     function updateColorLegend() {
       const legendDiv = document.getElementById("colorLegend");
-      // "이번 달"을 제외한 실제 주차들만 범례에 표시 (1주차부터)
       legendDiv.innerHTML = weeks.slice(1).map((week, idx) => `
         <div class="legend-item">
           <div class="legend-color week-row-${idx + 1}"></div>
@@ -161,7 +180,7 @@
     }
 
     function initChart() {
-      updateChart(0); // 기본값: 이번 달
+      updateChart(0);
     }
 
     function changePeriod(idx) {
@@ -178,18 +197,15 @@
 
       const targetWeek = weeks[weekIdx];
       
-      // 목표 수치 계산
-      let goal = 3; // 주차 기본값
+      let goal = 3;
       if (weekIdx === 0) {
-        // "이번 달" 선택 시: (주차 수 * 3)
         const weekCount = weeks.length - 1;
         goal = weekCount * 3;
       }
 
       const filtered = allItems.filter(item => {
-        if (!item.date) return false;
-        const [y, m, d] = item.date.split('.').map(s => parseInt(s.trim(), 10));
-        const postDate = new Date(y, m - 1, d);
+        const postDate = parseLocalDate(item.date);
+        if (!postDate) return false;
         return postDate >= targetWeek.start && postDate <= targetWeek.end;
       });
 
@@ -204,7 +220,6 @@
       const labels = sortedWriters.map(s => s[0]);
       const dataValues = sortedWriters.map(s => s[1]);
 
-      // 목표 달성 여부에 따른 색상 및 투명도 설정
       const backgroundColors = dataValues.map(v => 
         v >= goal ? 'rgba(54, 162, 235, 0.8)' : 'rgba(255, 99, 132, 0.3)'
       );
@@ -257,7 +272,6 @@
             ctx.lineTo(right, yPos);
             ctx.stroke();
             
-            // 목표 텍스트 표시
             ctx.fillStyle = 'rgba(255, 99, 132, 1)';
             ctx.font = 'bold 12px sans-serif';
             ctx.textAlign = 'right';
@@ -275,15 +289,12 @@
       const monthCount = {};
 
       allItems.forEach(item => {
-        if (!item.date) return;
-        // 날짜 형식: "2026.04.26."
-        const parts = item.date.split('.');
-        if (parts.length >= 2) {
-          const year = parts[0].trim();
-          const month = parseInt(parts[1], 10);
-          if (year) yearCount[year] = (yearCount[year] || 0) + 1;
-          if (!isNaN(month)) monthCount[month] = (monthCount[month] || 0) + 1;
-        }
+        const d = parseLocalDate(item.date);
+        if (!d) return;
+        const year = d.getFullYear();
+        const month = d.getMonth() + 1;
+        yearCount[year] = (yearCount[year] || 0) + 1;
+        monthCount[month] = (monthCount[month] || 0) + 1;
       });
 
       const bestYear = Object.keys(yearCount).reduce((a, b) => (yearCount[a] > yearCount[b] ? a : b), "");
@@ -301,7 +312,6 @@
       const dropdown = document.getElementById(`${key}FilterDropdown`);
       const isShow = dropdown.classList.contains('show');
       
-      // 모든 드롭다운 닫기
       document.querySelectorAll('.filter-dropdown').forEach(d => d.classList.remove('show'));
       
       if (!isShow) {
@@ -310,33 +320,38 @@
       }
     }
 
-    function populateFilterList(key) {
+    function populateFilterList(key, searchTerm = "") {
       const listDiv = document.getElementById(`${key}FilterList`);
       const targetWeek = weeks[activeWeekIdx];
       
-      // 현재 선택된 주차에 해당하는 고유값만 추출
       const uniqueValues = [...new Set(allItems
         .filter(item => {
-          if (!item.date) return false;
-          const [y, m, d] = item.date.split('.').map(s => parseInt(s.trim(), 10));
-          const postDate = new Date(y, m - 1, d);
+          const postDate = parseLocalDate(item.date);
+          if (!postDate) return false;
           return postDate >= targetWeek.start && postDate <= targetWeek.end;
         })
         .map(item => String(item[key] || ""))
       )].sort();
 
-      // 필터 상태 초기화 (처음 열 때 모든 값이 Set에 없으면 모두 선택된 것으로 간주)
-      if (filters[key].size === 0) {
+      if (filters[key].size === 0 && searchTerm === "") {
         uniqueValues.forEach(v => filters[key].add(v));
       }
 
-      listDiv.innerHTML = uniqueValues.map(val => `
+      const filteredValues = uniqueValues.filter(val => 
+        val.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+      listDiv.innerHTML = filteredValues.map(val => `
         <label class="filter-item">
           <input type="checkbox" ${filters[key].has(val) ? 'checked' : ''} 
             onchange="handleFilterChange('${key}', '${val}', this.checked)" />
           <span>${escapeHtml(val)}</span>
         </label>
       `).join("");
+    }
+
+    function filterFilterList(key, value) {
+      populateFilterList(key, value);
     }
 
     function handleFilterChange(key, value, checked) {
@@ -354,7 +369,7 @@
       
       checkboxes.forEach(cb => {
         cb.checked = checked;
-        const val = cb.parentElement.textContent.trim();
+        const val = cb.parentElement.querySelector('span').textContent.trim();
         if (checked) filters[key].add(val);
         else filters[key].delete(val);
       });
@@ -362,7 +377,6 @@
       renderTable();
     }
 
-    // 문서 클릭 시 드롭다운 닫기
     document.addEventListener('click', () => {
       document.querySelectorAll('.filter-dropdown').forEach(d => d.classList.remove('show'));
     });
@@ -375,7 +389,6 @@
         sortConfig.direction = 'asc';
       }
 
-      // UI 표시 업데이트
       document.querySelectorAll('.sortable').forEach(th => {
         th.classList.remove('asc', 'desc');
       });
@@ -385,11 +398,9 @@
     }
 
     function getWeekIdx(dateStr) {
-      if (!dateStr) return -1;
-      const [y, m, d] = dateStr.split('.').map(s => parseInt(s.trim(), 10));
-      const postDate = new Date(y, m - 1, d);
+      const postDate = parseLocalDate(dateStr);
+      if (!postDate) return -1;
       
-      // 0번째는 "이번 달"이므로 실제 주차는 1부터 시작
       for (let i = 1; i < weeks.length; i++) {
         if (postDate >= weeks[i].start && postDate <= weeks[i].end) {
           return i;
@@ -404,26 +415,22 @@
 
       let filtered = allItems.filter(item => {
         // 1. 기간 필터링
-        if (!item.date) return false;
-        const [y, m, d] = item.date.split('.').map(s => parseInt(s.trim(), 10));
-        const postDate = new Date(y, m - 1, d);
+        const postDate = parseLocalDate(item.date);
+        if (!postDate) return false;
         if (!(postDate >= targetWeek.start && postDate <= targetWeek.end)) return false;
 
         // 2. 컬럼별 체크박스 필터링
         const valDate = String(item.date || "");
         const valWriter = String(item.writer || "");
-        
         const matchDate = filters.date.size === 0 || filters.date.has(valDate);
         const matchWriter = filters.writer.size === 0 || filters.writer.has(valWriter);
         
         return matchDate && matchWriter;
       });
 
-      // 정렬 적용
       filtered.sort((a, b) => {
         let valA = String(a[sortConfig.key] || "");
         let valB = String(b[sortConfig.key] || "");
-        
         let comparison = valA.localeCompare(valB);
         return sortConfig.direction === 'asc' ? comparison : -comparison;
       });
