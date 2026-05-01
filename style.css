@@ -171,20 +171,21 @@ body {
 
   .header-content {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 4px;
-    padding-bottom: 4px;
+    gap: 8px;
+    padding: 4px 0;
   }
 
   .filter-trigger {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 2px 6px;
+    padding: 2px 4px;
     font-size: 10px;
     cursor: pointer;
     color: #666;
+    flex-shrink: 0;
   }
 
   .filter-trigger:hover {

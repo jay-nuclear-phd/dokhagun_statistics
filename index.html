@@ -29,10 +29,6 @@
       </div>
     </section>
 
-    <section class="filters">
-      <input id="searchInput" type="text" placeholder="작성자 또는 제목 검색" />
-    </section>
-
     <table>
       <thead>
         <tr>
@@ -374,7 +370,6 @@
     }
 
     function renderTable() {
-      const globalKeyword = document.getElementById("searchInput").value.trim().toLowerCase();
       const tbody = document.getElementById("tableBody");
       const targetWeek = weeks[activeWeekIdx];
 
@@ -385,17 +380,10 @@
         const postDate = new Date(y, m - 1, d);
         if (!(postDate >= targetWeek.start && postDate <= targetWeek.end)) return false;
 
-        // 2. 통합 검색 필터링
-        const matchGlobal = !globalKeyword || 
-          String(item.writer || "").toLowerCase().includes(globalKeyword) || 
-          String(item.title || "").toLowerCase().includes(globalKeyword);
-        if (!matchGlobal) return false;
-
-        // 3. 컬럼별 체크박스 필터링
+        // 2. 컬럼별 체크박스 필터링
         const valDate = String(item.date || "");
         const valWriter = String(item.writer || "");
         
-        // 필터가 비어있지 않은 경우에만 체크 (비어있으면 해당 주차의 모든 값이 선택된 상태로 populate에서 처리됨)
         const matchDate = filters.date.size === 0 || filters.date.has(valDate);
         const matchWriter = filters.writer.size === 0 || filters.writer.has(valWriter);
         
@@ -434,8 +422,6 @@
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
     }
-
-    document.getElementById("searchInput").addEventListener("input", renderTable);
 
     loadData();
   </script>
