@@ -1,8 +1,8 @@
 window.naverCafeData = {
-  "updated_at": "2026-05-01 12:00:06",
+  "updated_at": "2026-05-04 04:02:04",
   "start_date": "2026-03-30",
   "end_date": "2026-04-26",
-  "count": 404,
+  "count": 419,
   "items": [
     {
       "menu": "37",
@@ -566,6 +566,126 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
+      "page": 6,
+      "article_number": "7018",
+      "date": "2026.04.12.",
+      "writer": "독서맹수",
+      "title": "[Day 7] 독서맹수 / 세상에는 놀랄 일이 생긴다"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "7015",
+      "date": "2026.04.12.",
+      "writer": "jensnet",
+      "title": "[Day6] 부자가 되는 지름길 / 돈의 심리학"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "7011",
+      "date": "2026.04.12.",
+      "writer": "jensnet",
+      "title": "[Day5] 독서 나눔을 하고.."
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "7008",
+      "date": "2026.04.12.",
+      "writer": "토끼샘 권채민",
+      "title": "[Day4] 내 아이는 나와 다르게 키우고싶다:"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "7007",
+      "date": "2026.04.12.",
+      "writer": "토끼샘 권채민",
+      "title": "[Day 3] 공포의 순간"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6990",
+      "date": "2026.04.11.",
+      "writer": "독서맹수",
+      "title": "[Day 6] 독서맹수 / 적당히 합리적인 것이 낫다"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6978",
+      "date": "2026.04.10.",
+      "writer": "독도군",
+      "title": "[Day 9]독도군 한지연 / 익숙한것들의 그림자"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6977",
+      "date": "2026.04.10.",
+      "writer": "야무진",
+      "title": "'값'을 치른다는 것"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6972",
+      "date": "2026.04.10.",
+      "writer": "나아가군",
+      "title": "[Day 6] 나아가군/ 울트라 마라톤"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6968",
+      "date": "2026.04.09.",
+      "writer": "깨어있군",
+      "title": "[Day 6] 깨어있군 / 인간관계의 타이밍"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6967",
+      "date": "2026.04.09.",
+      "writer": "독서맹수",
+      "title": "[Day 5] 독서맹수 /  부는 눈에 보이지 않는다"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6963",
+      "date": "2026.04.09.",
+      "writer": "자유시간 투자자",
+      "title": "[Day 5] 곧 석유가 고갈된다고 했지만, 우리는 아직도 잘 쓰고 있다"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6961",
+      "date": "2026.04.09.",
+      "writer": "독하군 최영웅",
+      "title": "[Day 8] 일상을 갖게 된 부자 / 최영웅 소령, 독하군 독서모임"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6960",
+      "date": "2026.04.09.",
+      "writer": "깨어있군",
+      "title": "[Day 5] 깨어있군 / '부'란 무엇인가?"
+    },
+    {
+      "menu": "37",
+      "page": 6,
+      "article_number": "6955",
+      "date": "2026.04.09.",
+      "writer": "jensnet",
+      "title": "[Day4] \"부\"가 가진 본질적 의미 / 돈의 심리학"
+    },
+    {
+      "menu": "37",
       "page": 7,
       "article_number": "6954",
       "date": "2026.04.08.",
@@ -1038,7 +1158,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7227",
       "date": "2026.04.26.",
       "writer": "달달하군 김민수",
@@ -1046,7 +1166,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7225",
       "date": "2026.04.26.",
       "writer": "영화보는 떡볶이",
@@ -1054,7 +1174,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7218",
       "date": "2026.04.25.",
       "writer": "유니크하군",
@@ -1062,7 +1182,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7201",
       "date": "2026.04.24.",
       "writer": "의리하군 정승일",
@@ -1070,7 +1190,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7197",
       "date": "2026.04.24.",
       "writer": "의리하군 정승일",
@@ -1078,7 +1198,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7192",
       "date": "2026.04.23.",
       "writer": "톡톡하군 김성호",
@@ -1158,7 +1278,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 3,
       "article_number": "7151",
       "date": "2026.04.20.",
       "writer": "영화보는 떡볶이",
@@ -1166,7 +1286,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 3,
       "article_number": "7149",
       "date": "2026.04.20.",
       "writer": "자유롭군 안남규",
@@ -1174,7 +1294,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 3,
       "article_number": "7148",
       "date": "2026.04.20.",
       "writer": "온유",
@@ -1182,7 +1302,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 3,
       "article_number": "7145",
       "date": "2026.04.19.",
       "writer": "의리하군 정승일",
@@ -1190,7 +1310,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 3,
       "article_number": "7137",
       "date": "2026.04.19.",
       "writer": "단단하군 민규남",
@@ -1198,7 +1318,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 3,
       "article_number": "7131",
       "date": "2026.04.19.",
       "writer": "자유롭군 안남규",
@@ -1278,7 +1398,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 3,
+      "page": 4,
       "article_number": "7090",
       "date": "2026.04.17.",
       "writer": "건강하군",
@@ -1286,7 +1406,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 3,
+      "page": 4,
       "article_number": "7089",
       "date": "2026.04.17.",
       "writer": "유니크하군",
@@ -1294,7 +1414,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 3,
+      "page": 4,
       "article_number": "7086",
       "date": "2026.04.16.",
       "writer": "JNP",
@@ -1302,7 +1422,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 3,
+      "page": 4,
       "article_number": "7077",
       "date": "2026.04.16.",
       "writer": "달달하군 김민수",
@@ -1310,7 +1430,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 3,
+      "page": 4,
       "article_number": "7070",
       "date": "2026.04.16.",
       "writer": "자유롭군 안남규",
@@ -1318,7 +1438,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 3,
+      "page": 4,
       "article_number": "7069",
       "date": "2026.04.16.",
       "writer": "건강하군",
@@ -1398,7 +1518,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 4,
+      "page": 5,
       "article_number": "7017",
       "date": "2026.04.12.",
       "writer": "JNP",
@@ -1406,7 +1526,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 4,
+      "page": 5,
       "article_number": "7016",
       "date": "2026.04.12.",
       "writer": "JNP",
@@ -1414,7 +1534,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 4,
+      "page": 5,
       "article_number": "7010",
       "date": "2026.04.12.",
       "writer": "의리하군 정승일",
@@ -1422,7 +1542,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 4,
+      "page": 5,
       "article_number": "7001",
       "date": "2026.04.12.",
       "writer": "달달하군 김민수",
@@ -1430,7 +1550,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 4,
+      "page": 5,
       "article_number": "6998",
       "date": "2026.04.12.",
       "writer": "JNP",
@@ -1438,7 +1558,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 4,
+      "page": 5,
       "article_number": "6997",
       "date": "2026.04.11.",
       "writer": "유니크하군",
@@ -1518,7 +1638,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 5,
+      "page": 6,
       "article_number": "6973",
       "date": "2026.04.10.",
       "writer": "JNP",
@@ -1526,7 +1646,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 5,
+      "page": 6,
       "article_number": "6970",
       "date": "2026.04.09.",
       "writer": "유니크하군",
@@ -1534,7 +1654,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 5,
+      "page": 6,
       "article_number": "6969",
       "date": "2026.04.09.",
       "writer": "영화보는 떡볶이",
@@ -1542,7 +1662,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 5,
+      "page": 6,
       "article_number": "6958",
       "date": "2026.04.09.",
       "writer": "건강하군",
@@ -1550,7 +1670,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 5,
+      "page": 6,
       "article_number": "6957",
       "date": "2026.04.09.",
       "writer": "자유롭군 안남규",
@@ -1558,7 +1678,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 5,
+      "page": 6,
       "article_number": "6956",
       "date": "2026.04.09.",
       "writer": "단단하군 민규남",
@@ -1638,7 +1758,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 6,
+      "page": 7,
       "article_number": "6927",
       "date": "2026.04.07.",
       "writer": "의리하군 정승일",
@@ -1646,7 +1766,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 6,
+      "page": 7,
       "article_number": "6915",
       "date": "2026.04.06.",
       "writer": "톡톡하군 김성호",
@@ -1654,7 +1774,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 6,
+      "page": 7,
       "article_number": "6913",
       "date": "2026.04.06.",
       "writer": "영화보는 떡볶이",
@@ -1662,7 +1782,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 6,
+      "page": 7,
       "article_number": "6912",
       "date": "2026.04.06.",
       "writer": "건강하군",
@@ -1670,7 +1790,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 6,
+      "page": 7,
       "article_number": "6911",
       "date": "2026.04.05.",
       "writer": "온유",
@@ -1678,7 +1798,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 6,
+      "page": 7,
       "article_number": "6909",
       "date": "2026.04.05.",
       "writer": "온유",
@@ -1758,7 +1878,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 7,
+      "page": 8,
       "article_number": "6869",
       "date": "2026.04.04.",
       "writer": "영화보는 떡볶이",
@@ -1766,7 +1886,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 7,
+      "page": 8,
       "article_number": "6866",
       "date": "2026.04.03.",
       "writer": "JNP",
@@ -1774,7 +1894,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 7,
+      "page": 8,
       "article_number": "6856",
       "date": "2026.04.03.",
       "writer": "JNP",
@@ -1782,7 +1902,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 7,
+      "page": 8,
       "article_number": "6852",
       "date": "2026.04.03.",
       "writer": "의리하군 정승일",
@@ -1790,7 +1910,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 7,
+      "page": 8,
       "article_number": "6848",
       "date": "2026.04.02.",
       "writer": "의리하군 정승일",
@@ -1798,7 +1918,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 7,
+      "page": 8,
       "article_number": "6846",
       "date": "2026.04.02.",
       "writer": "JNP",
@@ -1966,7 +2086,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7186",
       "date": "2026.04.22.",
       "writer": "철저하군",
@@ -1974,7 +2094,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7178",
       "date": "2026.04.22.",
       "writer": "블루진즈 황의진",
@@ -1982,7 +2102,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7177",
       "date": "2026.04.22.",
       "writer": "도사 정수진",
@@ -2086,7 +2206,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 3,
       "article_number": "7083",
       "date": "2026.04.16.",
       "writer": "굳건하군 이태희",
@@ -2094,7 +2214,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 3,
       "article_number": "7082",
       "date": "2026.04.16.",
       "writer": "철저하군",
@@ -2102,7 +2222,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 3,
       "article_number": "7078",
       "date": "2026.04.16.",
       "writer": "도사 정수진",
@@ -2206,7 +2326,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 3,
+      "page": 4,
       "article_number": "7006",
       "date": "2026.04.12.",
       "writer": "블루진즈 황의진",
@@ -2214,7 +2334,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 3,
+      "page": 4,
       "article_number": "6991",
       "date": "2026.04.11.",
       "writer": "도사 정수진",
@@ -2222,7 +2342,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 3,
+      "page": 4,
       "article_number": "6988",
       "date": "2026.04.11.",
       "writer": "철저하군",
@@ -2326,7 +2446,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 4,
+      "page": 5,
       "article_number": "6918",
       "date": "2026.04.06.",
       "writer": "집요하군 김혜진",
@@ -2334,7 +2454,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 4,
+      "page": 5,
       "article_number": "6904",
       "date": "2026.04.05.",
       "writer": "블루진즈 황의진",
@@ -2342,7 +2462,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 4,
+      "page": 5,
       "article_number": "6899",
       "date": "2026.04.05.",
       "writer": "굳건하군 이태희",
@@ -2446,7 +2566,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 5,
+      "page": 6,
       "article_number": "6818",
       "date": "2026.03.31.",
       "writer": "철저하군",
@@ -2454,7 +2574,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 5,
+      "page": 6,
       "article_number": "6816",
       "date": "2026.03.31.",
       "writer": "집요하군 김혜진",
@@ -2462,7 +2582,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 5,
+      "page": 6,
       "article_number": "6807",
       "date": "2026.03.30.",
       "writer": "철저하군",
@@ -2566,7 +2686,7 @@ window.naverCafeData = {
     },
     {
       "menu": "40",
-      "page": 1,
+      "page": 2,
       "article_number": "7216",
       "date": "2026.04.25.",
       "writer": "꾸준하군 한윤정",
@@ -2686,7 +2806,7 @@ window.naverCafeData = {
     },
     {
       "menu": "40",
-      "page": 2,
+      "page": 3,
       "article_number": "7124",
       "date": "2026.04.19.",
       "writer": "책내음 양자강",
@@ -2806,7 +2926,7 @@ window.naverCafeData = {
     },
     {
       "menu": "40",
-      "page": 3,
+      "page": 4,
       "article_number": "7030",
       "date": "2026.04.12.",
       "writer": "양기웅",
@@ -2926,7 +3046,7 @@ window.naverCafeData = {
     },
     {
       "menu": "40",
-      "page": 4,
+      "page": 5,
       "article_number": "6924",
       "date": "2026.04.07.",
       "writer": "꾸준하군 한윤정",
@@ -3046,7 +3166,7 @@ window.naverCafeData = {
     },
     {
       "menu": "40",
-      "page": 5,
+      "page": 6,
       "article_number": "6871",
       "date": "2026.04.04.",
       "writer": "양기웅",
