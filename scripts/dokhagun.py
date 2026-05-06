@@ -17,8 +17,8 @@ try:
 except Exception:
     pass
 
-START_DATE = "2026-03-30"
-END_DATE = "2026-04-26"
+START_DATE = "2026-05-04"
+END_DATE = "2026-05-31"
 
 OUTPUT_DIR = Path("data")
 OUTPUT_DIR.mkdir(exist_ok=True)
