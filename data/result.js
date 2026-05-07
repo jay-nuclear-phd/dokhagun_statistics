@@ -1,9 +1,33 @@
 window.naverCafeData = {
-  "updated_at": "2026-05-07 04:25:24",
+  "updated_at": "2026-05-08 04:00:36",
   "start_date": "2026-05-04",
   "end_date": "2026-05-31",
-  "count": 16,
+  "count": 29,
   "items": [
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7311",
+      "date": "2026.05.06.",
+      "writer": "유꾸나줌",
+      "title": "[Day 2] 유꾸나줌 박선애 / 나도 비둘기인가?"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7309",
+      "date": "2026.05.06.",
+      "writer": "야무진",
+      "title": "[DAY1] 집단속에 살며 생각하기."
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7304",
+      "date": "2026.05.06.",
+      "writer": "독도군 한지연",
+      "title": "[Day 1] 독도군 한지연 / 별을 볼려면…"
+    },
     {
       "menu": "37",
       "page": 1,
@@ -55,6 +79,46 @@ window.naverCafeData = {
     {
       "menu": "38",
       "page": 1,
+      "article_number": "7314",
+      "date": "2026.05.06.",
+      "writer": "유니크하군",
+      "title": "[공유] [5월 DAY 3] 유니크하군 / 모르는게 잘못은 아니다."
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7313",
+      "date": "2026.05.06.",
+      "writer": "영화보는 떡볶이",
+      "title": "5월[Day-3] 보상의 법칙"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7312",
+      "date": "2026.05.06.",
+      "writer": "JNP",
+      "title": "[Day 3] JNP 서정원 / 도서 리뷰 - 피터 린치의 투자 이야기"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7310",
+      "date": "2026.05.06.",
+      "writer": "책내음 양자강",
+      "title": "[Day1] 책내음(양자강) / 하버드생도 우리와 같은 사람이였다."
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7306",
+      "date": "2026.05.06.",
+      "writer": "톡톡하군 김성호",
+      "title": "[Day-1]매직큐 김성호(톡톡하군) / 가슴에 남은 폐달의 온도"
+    },
+    {
+      "menu": "38",
+      "page": 1,
       "article_number": "7303",
       "date": "2026.05.06.",
       "writer": "JNP",
@@ -95,6 +159,38 @@ window.naverCafeData = {
     {
       "menu": "39",
       "page": 1,
+      "article_number": "7316",
+      "date": "2026.05.07.",
+      "writer": "꾸준하군 한윤정",
+      "title": "[공유] [Day 2 꾸준하군 한윤정 / 워런버핏이 월스트리트에서 살지 않은 이유]"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7315",
+      "date": "2026.05.07.",
+      "writer": "꾸준하군 한윤정",
+      "title": "[공유] [Day 1 꾸준하군 한윤정 / 폭탄은 늘 개인들의 손에서 터진다!]"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7308",
+      "date": "2026.05.06.",
+      "writer": "일리아나",
+      "title": "[Day1] 일리아나 권가은 / 5월은.."
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7305",
+      "date": "2026.05.06.",
+      "writer": "굳건하군 이태희",
+      "title": "[Day 1] 굳건하군 이태희 / 모두가 열광할 때가 가장 위험하다."
+    },
+    {
+      "menu": "39",
+      "page": 1,
       "article_number": "7302",
       "date": "2026.05.06.",
       "writer": "철저하군",
@@ -123,6 +219,14 @@ window.naverCafeData = {
       "date": "2026.05.04.",
       "writer": "철저하군",
       "title": "Day1. 신속한 결정이 가져오는 성과"
+    },
+    {
+      "menu": "40",
+      "page": 1,
+      "article_number": "7307",
+      "date": "2026.05.06.",
+      "writer": "쓰나미",
+      "title": "(Day 2) 5월의 새벽, 제 책상 위에는 7권의 스승이 살고 있습니다"
     },
     {
       "menu": "40",
