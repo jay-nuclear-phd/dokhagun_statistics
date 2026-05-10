@@ -1,12 +1,124 @@
 window.naverCafeData = {
-  "updated_at": "2026-05-08 04:00:36",
+  "updated_at": "2026-05-11 04:00:58",
   "start_date": "2026-05-04",
   "end_date": "2026-05-31",
-  "count": 29,
+  "count": 73,
   "items": [
     {
       "menu": "37",
       "page": 1,
+      "article_number": "7364",
+      "date": "2026.05.10.",
+      "writer": "아파치군",
+      "title": "[Day 2] 아파치군 우동균 / 많은 사람이 열광할 때가 가장 위험하다"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7360",
+      "date": "2026.05.10.",
+      "writer": "깨어있군",
+      "title": "[Day 3] 깨어있군 / 변화 (병렬독서 데미안)"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7351",
+      "date": "2026.05.09.",
+      "writer": "아파치군",
+      "title": "[Day 1] / 아파치군 우동균 / 부자의 말센스 서문"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7349",
+      "date": "2026.05.09.",
+      "writer": "이동형",
+      "title": "[Day 3] 이동형 / 부자들의 심리학 1주차-3 / 바닥으로 향하는 손실회피의 본능"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7348",
+      "date": "2026.05.09.",
+      "writer": "깨어있군",
+      "title": "/[Day 2] 깨어있군 / 합리적인 판단이란? (대표성 휴리스틱)나는"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7340",
+      "date": "2026.05.09.",
+      "writer": "리치비",
+      "title": "(DAY2)알고보니 이 책이 돈을 벌게 해주었군.(전망이론, 손실회피)"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7335",
+      "date": "2026.05.08.",
+      "writer": "야무진",
+      "title": "[DAY3]매일하는 독서에도 우연은 있기마련"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7334",
+      "date": "2026.05.08.",
+      "writer": "jensnet",
+      "title": "[Day 1] 부자들의 생각법 / 워렌머핏, 이걸 안했기에 성공할수 있었다."
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7333",
+      "date": "2026.05.08.",
+      "writer": "파워EN",
+      "title": "[5월 Day 1] 영어 사자성어 (과유불급)/ 독원결의 박경준"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7331",
+      "date": "2026.05.08.",
+      "writer": "이동형",
+      "title": "[Day 2] 이동형 / 부자들의 심리학 1주차-2 / 다음 번에 동전의 앞면이 나올 확률은?"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7328",
+      "date": "2026.05.08.",
+      "writer": "독도군 한지연",
+      "title": "[Day 3]독도군 한지연 / 원띵"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7326",
+      "date": "2026.05.08.",
+      "writer": "독하군 최영웅",
+      "title": "[Day 3]인생의 성공을 위한 삭제(Delete)"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7320",
+      "date": "2026.05.07.",
+      "writer": "야무진",
+      "title": "[DAY2] 인생이 꿀잼인 이유"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7318",
+      "date": "2026.05.07.",
+      "writer": "독도군 한지연",
+      "title": "[Day 2] 독도군 한지연 / 자존-여덟단어"
+    },
+    {
+      "menu": "37",
+      "page": 2,
       "article_number": "7311",
       "date": "2026.05.06.",
       "writer": "유꾸나줌",
@@ -14,7 +126,7 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 2,
       "article_number": "7309",
       "date": "2026.05.06.",
       "writer": "야무진",
@@ -22,7 +134,7 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 2,
       "article_number": "7304",
       "date": "2026.05.06.",
       "writer": "독도군 한지연",
@@ -30,7 +142,7 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 2,
       "article_number": "7301",
       "date": "2026.05.06.",
       "writer": "독하군 최영웅",
@@ -38,7 +150,7 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 2,
       "article_number": "7295",
       "date": "2026.05.05.",
       "writer": "유꾸나줌",
@@ -46,7 +158,7 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 2,
       "article_number": "7293",
       "date": "2026.05.05.",
       "writer": "독하군 최영웅",
@@ -54,7 +166,7 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 2,
       "article_number": "7291",
       "date": "2026.05.05.",
       "writer": "깨어있군",
@@ -62,7 +174,7 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 2,
       "article_number": "7288",
       "date": "2026.05.04.",
       "writer": "리치비",
@@ -70,7 +182,7 @@ window.naverCafeData = {
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 2,
       "article_number": "7286",
       "date": "2026.05.04.",
       "writer": "이동형",
@@ -79,6 +191,134 @@ window.naverCafeData = {
     {
       "menu": "38",
       "page": 1,
+      "article_number": "7361",
+      "date": "2026.05.10.",
+      "writer": "명확하군",
+      "title": "[공유] [독하군 Day3] 무언가 준다는 것."
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7359",
+      "date": "2026.05.10.",
+      "writer": "달달하군 김민수",
+      "title": "[5월 2조] 달달하군 / DAY3 / 경험의 멸종"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7358",
+      "date": "2026.05.10.",
+      "writer": "달달하군 김민수",
+      "title": "[5월 2조] 달달하군 / DAY2 / 첫 만남"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7356",
+      "date": "2026.05.09.",
+      "writer": "뚝샘",
+      "title": "[Day 2] 뚝샘 전혜진/나를 일으켜 세워주는 사람들"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7354",
+      "date": "2026.05.09.",
+      "writer": "건강하군",
+      "title": "[Day 3] 건강하군 / 원대한 목표의 힘"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7353",
+      "date": "2026.05.09.",
+      "writer": "건강하군",
+      "title": "[Day 2] 건강하군 / 비옥한 토양 : 독하군 독서모임"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7350",
+      "date": "2026.05.09.",
+      "writer": "톡톡하군 김성호",
+      "title": "[Day-3]매직큐 김성호(톡톡하군) / 말이라는 씨앗, 신뢰라는 땅"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7344",
+      "date": "2026.05.09.",
+      "writer": "의리하군 정승일",
+      "title": "[DAY 4] 의리하군 정승일 / 계좌를 자주 확인하지 마라"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7343",
+      "date": "2026.05.09.",
+      "writer": "책내음 양자강",
+      "title": "[Day2] 책내음(양자강) 나는 내 인생을 어떤 태도로 마주하고 있을까?"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7342",
+      "date": "2026.05.09.",
+      "writer": "명확하군",
+      "title": "[공유] [5월 Day2] 긍정적인 영향"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7341",
+      "date": "2026.05.09.",
+      "writer": "딸셋소령",
+      "title": "부자들의 생각법이 가르쳐준 어버이날"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7339",
+      "date": "2026.05.09.",
+      "writer": "뚝샘",
+      "title": "[Day 1] 길을 잃은 날"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7338",
+      "date": "2026.05.08.",
+      "writer": "딸셋소령",
+      "title": "\"미다스의 손 앞에서 멈춘 이유\""
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7327",
+      "date": "2026.05.08.",
+      "writer": "달달하군 김민수",
+      "title": "[5월 2조] 달달하군 / DAY1 / 집단행동"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7321",
+      "date": "2026.05.07.",
+      "writer": "톡톡하군 김성호",
+      "title": "[Day-2]매직큐 김성호(톡톡하군) / 아빠 언제와?"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7319",
+      "date": "2026.05.07.",
+      "writer": "명확하군",
+      "title": "[공유] [5월 Day1] 그게 돈이 됩니까?"
+    },
+    {
+      "menu": "38",
+      "page": 2,
       "article_number": "7314",
       "date": "2026.05.06.",
       "writer": "유니크하군",
@@ -86,7 +326,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7313",
       "date": "2026.05.06.",
       "writer": "영화보는 떡볶이",
@@ -94,7 +334,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7312",
       "date": "2026.05.06.",
       "writer": "JNP",
@@ -102,7 +342,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7310",
       "date": "2026.05.06.",
       "writer": "책내음 양자강",
@@ -110,7 +350,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7306",
       "date": "2026.05.06.",
       "writer": "톡톡하군 김성호",
@@ -118,7 +358,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7303",
       "date": "2026.05.06.",
       "writer": "JNP",
@@ -126,7 +366,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7298",
       "date": "2026.05.05.",
       "writer": "유니크하군",
@@ -134,7 +374,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7297",
       "date": "2026.05.05.",
       "writer": "의리하군 정승일",
@@ -142,7 +382,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7290",
       "date": "2026.05.05.",
       "writer": "JNP",
@@ -150,7 +390,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7287",
       "date": "2026.05.04.",
       "writer": "의리하군 정승일",
@@ -159,6 +399,118 @@ window.naverCafeData = {
     {
       "menu": "39",
       "page": 1,
+      "article_number": "7366",
+      "date": "2026.05.10.",
+      "writer": "굳건하군 이태희",
+      "title": "[Day 3] 굳건하군 이태희 / 투자할 때는 의심의 눈으로, 매몰비용의 오류"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7365",
+      "date": "2026.05.10.",
+      "writer": "굳건하군 이태희",
+      "title": "[Day 3] 굳건하군 이태희 / 투자할 때는 의심의 눈으로, 매몰비용의 오류"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7363",
+      "date": "2026.05.10.",
+      "writer": "도사 정수진",
+      "title": "[Day 3] 도사 정수진/ 부자들의 생각법( 상대성에 속지 않기/ 나만의 기준)"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7362",
+      "date": "2026.05.10.",
+      "writer": "도사 정수진",
+      "title": "[Day 2] 도사 정수진/ 돈의 심리학(손실회피, 포트폴리오, 자동주문, 본전)"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7357",
+      "date": "2026.05.10.",
+      "writer": "충실하군 최경남",
+      "title": "[Day 2] 충실하군 최경남 / 손실 인정"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7355",
+      "date": "2026.05.09.",
+      "writer": "철저하군",
+      "title": "Day 6. 소크라테스 가난에 대한 철학"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7347",
+      "date": "2026.05.09.",
+      "writer": "양기웅",
+      "title": "[DAY1] 부자들의 사고방식 시작 / 럭키아이 (양기웅)"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7346",
+      "date": "2026.05.09.",
+      "writer": "블루진즈 황의진",
+      "title": "[공유] [Day 2] 관계를 바꾸는 건 결국 ‘말’이었다"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7345",
+      "date": "2026.05.09.",
+      "writer": "블루진즈 황의진",
+      "title": "[공유] [Day 1] 완벽하지 않아도, 결국 잘될 사람의 태도"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7337",
+      "date": "2026.05.08.",
+      "writer": "굳건하군 이태희",
+      "title": "[Day 2] 굳건하군 이태희 / 부자들은 1% 행운도 바라지 않는다."
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7332",
+      "date": "2026.05.08.",
+      "writer": "철저하군",
+      "title": "Day 5. 오늘의 글쓰기"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7325",
+      "date": "2026.05.08.",
+      "writer": "도사 정수진",
+      "title": "[Day 1] 도사 정수진/ 부자들의 생각법(믿고 싶은 것만 믿는다/ 집단 밖에서 보기/ 우연)"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7324",
+      "date": "2026.05.08.",
+      "writer": "꾸준하군 한윤정",
+      "title": "[공유] [Day 3 꾸준하군 한윤정 / 대표성 휴리스틱의 오류]"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7322",
+      "date": "2026.05.07.",
+      "writer": "철저하군",
+      "title": "Day 4. 경험을 통해 얻게되는 소득"
+    },
+    {
+      "menu": "39",
+      "page": 2,
       "article_number": "7316",
       "date": "2026.05.07.",
       "writer": "꾸준하군 한윤정",
@@ -166,7 +518,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7315",
       "date": "2026.05.07.",
       "writer": "꾸준하군 한윤정",
@@ -174,7 +526,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7308",
       "date": "2026.05.06.",
       "writer": "일리아나",
@@ -182,7 +534,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7305",
       "date": "2026.05.06.",
       "writer": "굳건하군 이태희",
@@ -190,7 +542,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7302",
       "date": "2026.05.06.",
       "writer": "철저하군",
@@ -198,7 +550,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7300",
       "date": "2026.05.06.",
       "writer": "충실하군 최경남",
@@ -206,7 +558,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7294",
       "date": "2026.05.05.",
       "writer": "철저하군",
@@ -214,7 +566,7 @@ window.naverCafeData = {
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 2,
       "article_number": "7289",
       "date": "2026.05.04.",
       "writer": "철저하군",
