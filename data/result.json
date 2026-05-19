@@ -1,12 +1,340 @@
 {
-  "updated_at": "2026-05-11 04:00:58",
+  "updated_at": "2026-05-19 16:05:19",
   "start_date": "2026-05-04",
   "end_date": "2026-05-31",
-  "count": 73,
+  "count": 184,
   "items": [
     {
       "menu": "37",
       "page": 1,
+      "article_number": "7489",
+      "date": "2026.05.19.",
+      "writer": "독도군 한지연",
+      "title": "[Day 7]독도군 한지연 / 데미안"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7487",
+      "date": "2026.05.18.",
+      "writer": "유꾸나줌",
+      "title": "[Day 7] 유꾸나줌 박선애 / 현상 유지 편향"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7484",
+      "date": "2026.05.18.",
+      "writer": "리치비",
+      "title": "룰이 마음에 들지 않으면, 룰을 만들어라."
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7482",
+      "date": "2026.05.18.",
+      "writer": "리치비",
+      "title": "(군인 적금편) 당신의 돈은 어디로 가고 있는가"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7479",
+      "date": "2026.05.17.",
+      "writer": "파워EN",
+      "title": "[5월 Day 6] 화불단행과 새옹지마의 궁합 / 독원결의 박경준"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7478",
+      "date": "2026.05.17.",
+      "writer": "아파치군",
+      "title": "[Day6] 아파치군 우동균 / 내머리속의 장부"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7477",
+      "date": "2026.05.17.",
+      "writer": "자유시간 투자자",
+      "title": "[Day 6] 나는 달리기를 싫어해서 포병에 지원했다"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7474",
+      "date": "2026.05.17.",
+      "writer": "자유시간 투자자",
+      "title": "[Day 5] 본능역행"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7471",
+      "date": "2026.05.17.",
+      "writer": "아파치군",
+      "title": "[Day5] 아파치군 우동균 / 나를 아끼는 \"망설임\" 전략"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7468",
+      "date": "2026.05.17.",
+      "writer": "자유시간 투자자",
+      "title": "[Day 4] 인간은 투자에 실패하도록 설계되어 있다."
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7466",
+      "date": "2026.05.17.",
+      "writer": "유꾸나줌",
+      "title": "[Day 6] 유꾸나줌 박선애 / 심적회계"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7462",
+      "date": "2026.05.17.",
+      "writer": "독하군 최영웅",
+      "title": "[Day 6] 걱정의 90%는 일어나지 않는다(독하군)"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7460",
+      "date": "2026.05.17.",
+      "writer": "깨어있군",
+      "title": "[Day 5] 깨어있군 / 투쟁"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7459",
+      "date": "2026.05.17.",
+      "writer": "이동형",
+      "title": "[Day 6] 이동형 / 부자들의 심리학 2주차-3 / 소비를 통제하는 방법"
+    },
+    {
+      "menu": "37",
+      "page": 1,
+      "article_number": "7452",
+      "date": "2026.05.17.",
+      "writer": "유꾸나줌",
+      "title": "[Day 5]유꾸나줌 박선애 / 프레이밍 효과"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7447",
+      "date": "2026.05.16.",
+      "writer": "이동형",
+      "title": "[Day 5] 이동형 / 부자들의 심리학 2주차-2 / 대중 심리와 나의 생각"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7446",
+      "date": "2026.05.16.",
+      "writer": "리치비",
+      "title": "(10편) 알고보니 이 책이 돈을 벌게 해주었군(적금을 깰까말까)"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7441",
+      "date": "2026.05.16.",
+      "writer": "깨어있군",
+      "title": "[Day 4] 깨어있군 / 본전생각"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7435",
+      "date": "2026.05.15.",
+      "writer": "리치비",
+      "title": "(9편) 알고 보니 이 책이 돈을 벌게 해주었군(심적 회계)"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7432",
+      "date": "2026.05.15.",
+      "writer": "야무진",
+      "title": "[Day6] 혼자서 안되는건 스터디"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7430",
+      "date": "2026.05.15.",
+      "writer": "파워EN",
+      "title": "[5월 Day 5] 배움과 행동의 궁합 (영어표현)/ 독원결의 박경준"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7428",
+      "date": "2026.05.15.",
+      "writer": "독도군 한지연",
+      "title": "[Day 6]독도군 한지연 / 잠시 거울보는시간"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7425",
+      "date": "2026.05.14.",
+      "writer": "야무진",
+      "title": "[Day5] 부자는 아직입니다만"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7421",
+      "date": "2026.05.14.",
+      "writer": "리치비",
+      "title": "(7편) 알고보니 이 책이 돈을 벌게 해주었군(정박효과)"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7415",
+      "date": "2026.05.13.",
+      "writer": "독도군 한지연",
+      "title": "[Day 5]독도군 한지연 / 변화 그리고 관계<->배려"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7413",
+      "date": "2026.05.13.",
+      "writer": "파워EN",
+      "title": "[5월 Day 4] 영웅님을 소환한 영어속담/ 독원결의 박경준"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7409",
+      "date": "2026.05.12.",
+      "writer": "유꾸나줌",
+      "title": "[Day 4]유꾸나줌 박선애 / 전통 경제학 vs 심리학"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7408",
+      "date": "2026.05.12.",
+      "writer": "아파치군",
+      "title": "[Day 4] 아파치군 우동균 / 매몰비용의 오류"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7403",
+      "date": "2026.05.12.",
+      "writer": "야무진",
+      "title": "[Day4] 부자들의 선택"
+    },
+    {
+      "menu": "37",
+      "page": 2,
+      "article_number": "7401",
+      "date": "2026.05.12.",
+      "writer": "독하군 최영웅",
+      "title": "[Day 5] 주식어플을 지우고 살아봐! / 최영웅 소령, 독하군 독서모임"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7394",
+      "date": "2026.05.11.",
+      "writer": "독도군 한지연",
+      "title": "[Day 4] 독도군 한지연 / 본질이란?"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7391",
+      "date": "2026.05.11.",
+      "writer": "이동형",
+      "title": "[Day 4] 이동형 / 부자들의 심리학 2주차-1 / 작은 돈부터 잘 다루어야 큰 돈을 다룬다."
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7389",
+      "date": "2026.05.11.",
+      "writer": "이지현",
+      "title": "[Day 1] 독원결의 이지현"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7386",
+      "date": "2026.05.11.",
+      "writer": "독하군 최영웅",
+      "title": "[Day 4] 부자들과 성공하는 사람들의 공통점"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7381",
+      "date": "2026.05.10.",
+      "writer": "자유시간 투자자",
+      "title": "[2026 전반기 3/3] 부동산 총정리_전망과 전략"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7380",
+      "date": "2026.05.10.",
+      "writer": "유꾸나줌",
+      "title": "[Day 3] 유꾸나줌 박선애 / 손실 회피 심리 극복? 게으름..."
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7378",
+      "date": "2026.05.10.",
+      "writer": "자유시간 투자자",
+      "title": "[2026 전반기 2/3] 부동산 총정리와 전망_가격변화"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7377",
+      "date": "2026.05.10.",
+      "writer": "자유시간 투자자",
+      "title": "[2026 전반기 1/3] 부동산 총정리와 전망_트렌드"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7372",
+      "date": "2026.05.10.",
+      "writer": "아파치군",
+      "title": "[Day3] 아파치군 우동균/ 대표성의 오류"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7370",
+      "date": "2026.05.10.",
+      "writer": "파워EN",
+      "title": "[5월 Day 3] 영어 속담 (첫술에 배부르랴?)/ 독원결의 박경준"
+    },
+    {
+      "menu": "37",
+      "page": 3,
+      "article_number": "7368",
+      "date": "2026.05.10.",
+      "writer": "파워EN",
+      "title": "[5월 Day 2] 영어 사자성어 (고진감래)/ 독원결의 박경준"
+    },
+    {
+      "menu": "37",
+      "page": 3,
       "article_number": "7364",
       "date": "2026.05.10.",
       "writer": "아파치군",
@@ -14,7 +342,7 @@
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 3,
       "article_number": "7360",
       "date": "2026.05.10.",
       "writer": "깨어있군",
@@ -22,7 +350,7 @@
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 3,
       "article_number": "7351",
       "date": "2026.05.09.",
       "writer": "아파치군",
@@ -30,7 +358,7 @@
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 3,
       "article_number": "7349",
       "date": "2026.05.09.",
       "writer": "이동형",
@@ -38,7 +366,7 @@
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 4,
       "article_number": "7348",
       "date": "2026.05.09.",
       "writer": "깨어있군",
@@ -46,7 +374,7 @@
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 4,
       "article_number": "7340",
       "date": "2026.05.09.",
       "writer": "리치비",
@@ -54,7 +382,7 @@
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 4,
       "article_number": "7335",
       "date": "2026.05.08.",
       "writer": "야무진",
@@ -62,7 +390,7 @@
     },
     {
       "menu": "37",
-      "page": 1,
+      "page": 4,
       "article_number": "7334",
       "date": "2026.05.08.",
       "writer": "jensnet",
@@ -70,7 +398,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7333",
       "date": "2026.05.08.",
       "writer": "파워EN",
@@ -78,7 +406,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7331",
       "date": "2026.05.08.",
       "writer": "이동형",
@@ -86,7 +414,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7328",
       "date": "2026.05.08.",
       "writer": "독도군 한지연",
@@ -94,7 +422,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7326",
       "date": "2026.05.08.",
       "writer": "독하군 최영웅",
@@ -102,7 +430,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7320",
       "date": "2026.05.07.",
       "writer": "야무진",
@@ -110,7 +438,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7318",
       "date": "2026.05.07.",
       "writer": "독도군 한지연",
@@ -118,7 +446,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7311",
       "date": "2026.05.06.",
       "writer": "유꾸나줌",
@@ -126,7 +454,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7309",
       "date": "2026.05.06.",
       "writer": "야무진",
@@ -134,7 +462,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7304",
       "date": "2026.05.06.",
       "writer": "독도군 한지연",
@@ -142,7 +470,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7301",
       "date": "2026.05.06.",
       "writer": "독하군 최영웅",
@@ -150,7 +478,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 4,
       "article_number": "7295",
       "date": "2026.05.05.",
       "writer": "유꾸나줌",
@@ -158,7 +486,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 5,
       "article_number": "7293",
       "date": "2026.05.05.",
       "writer": "독하군 최영웅",
@@ -166,7 +494,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 5,
       "article_number": "7291",
       "date": "2026.05.05.",
       "writer": "깨어있군",
@@ -174,7 +502,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 5,
       "article_number": "7288",
       "date": "2026.05.04.",
       "writer": "리치비",
@@ -182,7 +510,7 @@
     },
     {
       "menu": "37",
-      "page": 2,
+      "page": 5,
       "article_number": "7286",
       "date": "2026.05.04.",
       "writer": "이동형",
@@ -191,6 +519,278 @@
     {
       "menu": "38",
       "page": 1,
+      "article_number": "7488",
+      "date": "2026.05.19.",
+      "writer": "의리하군 정승일",
+      "title": "[DAY 8] 의리하군 정승일 / 평범한 사람은 자신의 능력을 과대평가한다."
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7486",
+      "date": "2026.05.18.",
+      "writer": "책내음 양자강",
+      "title": "[Day7] 책내음(양자강) / 스토너! 마지막 강렬한 문구"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7483",
+      "date": "2026.05.18.",
+      "writer": "톡톡하군 김성호",
+      "title": "[Day-7]매직큐 김성호(톡톡하군) / 나는 MBTI가 아니다."
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7473",
+      "date": "2026.05.17.",
+      "writer": "건강하군",
+      "title": "[Day 4] 건강하군 / 미래의 나 상상도구"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7469",
+      "date": "2026.05.17.",
+      "writer": "영화보는 떡볶이",
+      "title": "5월 [Day-4.1 소대외박과 하나의 다이아]"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7464",
+      "date": "2026.05.17.",
+      "writer": "딸셋소령",
+      "title": "칭찬은 받은 만큼 줄 수 있다."
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7463",
+      "date": "2026.05.17.",
+      "writer": "영화보는 떡볶이",
+      "title": "5월[Day-4] 자본시장에서의 최후의 승자"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7461",
+      "date": "2026.05.17.",
+      "writer": "책내음 양자강",
+      "title": "[Day6] 책내음(양자강) / 지혜라는 말에 끌리다."
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7456",
+      "date": "2026.05.17.",
+      "writer": "달달하군 김민수",
+      "title": "[5월 2조] 달달하군 / DAY6 / 인생은 실전"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7454",
+      "date": "2026.05.17.",
+      "writer": "의리하군 정승일",
+      "title": "[DAY 7] 의리하군 정승일 / 사후 가정 사고"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7451",
+      "date": "2026.05.17.",
+      "writer": "딸셋소령",
+      "title": "진정성은 마음이 아니라 반복이다."
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7449",
+      "date": "2026.05.16.",
+      "writer": "명확하군",
+      "title": "[공유] [독하군 Day6] 괜찮은 투자"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7445",
+      "date": "2026.05.16.",
+      "writer": "책내음 양자강",
+      "title": "[Day5] 책내음(양자강) / 내 삶의 여덟단어는?"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7443",
+      "date": "2026.05.16.",
+      "writer": "유니크하군",
+      "title": "[공유] (5월 DAY 6) 유니크하군 / 부자들의 생각을 나도 할 수 있을까?"
+    },
+    {
+      "menu": "38",
+      "page": 1,
+      "article_number": "7440",
+      "date": "2026.05.16.",
+      "writer": "딸셋소령",
+      "title": "빌 밀러도 15년은 맞았다."
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7433",
+      "date": "2026.05.15.",
+      "writer": "명확하군",
+      "title": "[공유] [독하군Day5] 인정하기"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7427",
+      "date": "2026.05.15.",
+      "writer": "의리하군 정승일",
+      "title": "[DAY 6] 의리하군 정승일 / 종잣돈을 가장 쉽게 만드는 법"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7426",
+      "date": "2026.05.14.",
+      "writer": "톡톡하군 김성호",
+      "title": "[Day-6]매직큐 김성호(톡톡하군) / 완벽보다 다정함"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7419",
+      "date": "2026.05.13.",
+      "writer": "톡톡하군 김성호",
+      "title": "[Day-5]매직큐 김성호(톡톡하군) / 무대 뒤의 헤드폰"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7417",
+      "date": "2026.05.13.",
+      "writer": "달달하군 김민수",
+      "title": "[5월 2조] 달달하군 / DAY5 / 기다림을 저주하는 세상"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7416",
+      "date": "2026.05.13.",
+      "writer": "달달하군 김민수",
+      "title": "[5월 2조] 달달하군 / DAY4 / 50분 동안 4권을 읽었어요"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7410",
+      "date": "2026.05.12.",
+      "writer": "톡톡하군 김성호",
+      "title": "[Day-4]매직큐 김성호(톡톡하군) / 흔들려도 오늘은 선택한다."
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7406",
+      "date": "2026.05.12.",
+      "writer": "책내음 양자강",
+      "title": "[Day4] 책내음(양자강) / 데일카네기와 두번째 만남 도서"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7405",
+      "date": "2026.05.12.",
+      "writer": "유니크하군",
+      "title": "[공유] (5월 DAY 5) 유니크하군 / 열정이 식었다는 증거"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7397",
+      "date": "2026.05.12.",
+      "writer": "JNP",
+      "title": "[Day 6] JNP 서정원 / 재능보다 중요한 돈보는 법"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7396",
+      "date": "2026.05.12.",
+      "writer": "딸셋소령",
+      "title": "\"월스트리트 말고 버핏은 오마하, 나는 제주도?\""
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7395",
+      "date": "2026.05.12.",
+      "writer": "의리하군 정승일",
+      "title": "[DAY 5] 의리하군 정승일 / 우리를 낭비로 이끄는 오류"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7393",
+      "date": "2026.05.11.",
+      "writer": "명확하군",
+      "title": "[공유] [독하군Day4] 모두가 틀렸을 수도 있다"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7392",
+      "date": "2026.05.11.",
+      "writer": "JNP",
+      "title": "[Day 5] JNP 서정원 / 오컴의 면도날"
+    },
+    {
+      "menu": "38",
+      "page": 2,
+      "article_number": "7387",
+      "date": "2026.05.11.",
+      "writer": "JNP",
+      "title": "[Day 4] JNP 서정원 / 새로운 시대를 살아가는 강력한 무기 - 프로그래밍"
+    },
+    {
+      "menu": "38",
+      "page": 3,
+      "article_number": "7385",
+      "date": "2026.05.11.",
+      "writer": "뚝샘",
+      "title": "[Day3] 뚝샘 전혜진/재미있는 AI"
+    },
+    {
+      "menu": "38",
+      "page": 3,
+      "article_number": "7383",
+      "date": "2026.05.10.",
+      "writer": "유니크하군",
+      "title": "[공유] [5월 DAY 4] 유니크하군 / 일 잘하는 사람은 단순하게 말합니다."
+    },
+    {
+      "menu": "38",
+      "page": 3,
+      "article_number": "7382",
+      "date": "2026.05.10.",
+      "writer": "딸셋소령",
+      "title": "\"손실 회피 심리가 당신의 수익을 막는다.\""
+    },
+    {
+      "menu": "38",
+      "page": 3,
+      "article_number": "7367",
+      "date": "2026.05.10.",
+      "writer": "책내음 양자강",
+      "title": "[Day3] 책내음(양자강) / 이것도 슬럼프인가?"
+    },
+    {
+      "menu": "38",
+      "page": 3,
       "article_number": "7361",
       "date": "2026.05.10.",
       "writer": "명확하군",
@@ -198,7 +798,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7359",
       "date": "2026.05.10.",
       "writer": "달달하군 김민수",
@@ -206,7 +806,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7358",
       "date": "2026.05.10.",
       "writer": "달달하군 김민수",
@@ -214,7 +814,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7356",
       "date": "2026.05.09.",
       "writer": "뚝샘",
@@ -222,7 +822,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7354",
       "date": "2026.05.09.",
       "writer": "건강하군",
@@ -230,7 +830,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7353",
       "date": "2026.05.09.",
       "writer": "건강하군",
@@ -238,7 +838,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7350",
       "date": "2026.05.09.",
       "writer": "톡톡하군 김성호",
@@ -246,7 +846,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7344",
       "date": "2026.05.09.",
       "writer": "의리하군 정승일",
@@ -254,7 +854,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7343",
       "date": "2026.05.09.",
       "writer": "책내음 양자강",
@@ -262,7 +862,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7342",
       "date": "2026.05.09.",
       "writer": "명확하군",
@@ -270,7 +870,7 @@
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 3,
       "article_number": "7341",
       "date": "2026.05.09.",
       "writer": "딸셋소령",
@@ -278,7 +878,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7339",
       "date": "2026.05.09.",
       "writer": "뚝샘",
@@ -286,7 +886,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7338",
       "date": "2026.05.08.",
       "writer": "딸셋소령",
@@ -294,7 +894,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7327",
       "date": "2026.05.08.",
       "writer": "달달하군 김민수",
@@ -302,7 +902,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7321",
       "date": "2026.05.07.",
       "writer": "톡톡하군 김성호",
@@ -310,7 +910,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7319",
       "date": "2026.05.07.",
       "writer": "명확하군",
@@ -318,7 +918,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7314",
       "date": "2026.05.06.",
       "writer": "유니크하군",
@@ -326,7 +926,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7313",
       "date": "2026.05.06.",
       "writer": "영화보는 떡볶이",
@@ -334,7 +934,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7312",
       "date": "2026.05.06.",
       "writer": "JNP",
@@ -342,7 +942,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7310",
       "date": "2026.05.06.",
       "writer": "책내음 양자강",
@@ -350,7 +950,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7306",
       "date": "2026.05.06.",
       "writer": "톡톡하군 김성호",
@@ -358,7 +958,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7303",
       "date": "2026.05.06.",
       "writer": "JNP",
@@ -366,7 +966,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7298",
       "date": "2026.05.05.",
       "writer": "유니크하군",
@@ -374,7 +974,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7297",
       "date": "2026.05.05.",
       "writer": "의리하군 정승일",
@@ -382,7 +982,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7290",
       "date": "2026.05.05.",
       "writer": "JNP",
@@ -390,7 +990,7 @@
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 4,
       "article_number": "7287",
       "date": "2026.05.04.",
       "writer": "의리하군 정승일",
@@ -399,6 +999,278 @@
     {
       "menu": "39",
       "page": 1,
+      "article_number": "7485",
+      "date": "2026.05.18.",
+      "writer": "철저하군",
+      "title": "Day 13. 나대지마라! 다친데이~"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7481",
+      "date": "2026.05.18.",
+      "writer": "럭키아이",
+      "title": "[Day6] 행복은 상대성이다? 그러면 답이 없다 / 럭키아이"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7480",
+      "date": "2026.05.18.",
+      "writer": "럭키아이",
+      "title": "[Day 5] 부자들의 투자법 / 럭키아이"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7476",
+      "date": "2026.05.17.",
+      "writer": "충실하군 최경남",
+      "title": "[Day 6] 충실하군 최경남 / 세 개의 취미"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7475",
+      "date": "2026.05.17.",
+      "writer": "굳건하군 이태희",
+      "title": "[Day 6] 굳건하군 이태희 / 정박효과와 프레이밍 효과"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7470",
+      "date": "2026.05.17.",
+      "writer": "충실하군 최경남",
+      "title": "[Day 5] 충실하군 최경남 / 두 번은 거스르지 말 것"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7467",
+      "date": "2026.05.17.",
+      "writer": "충실하군 최경남",
+      "title": "[Day 4] 충실하군 최경남 / 밤 편지"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7457",
+      "date": "2026.05.17.",
+      "writer": "총명하군 최순희",
+      "title": "[DAY 3]  혼모노"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7455",
+      "date": "2026.05.17.",
+      "writer": "블루진즈 황의진",
+      "title": "[공유] [Day 6] 확증편향"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7453",
+      "date": "2026.05.17.",
+      "writer": "굳건하군 이태희",
+      "title": "[Day 5] 굳건하군 이태희 / 낭비하게 되는 심리"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7450",
+      "date": "2026.05.17.",
+      "writer": "철저하군",
+      "title": "Day 12. 내가 원하는곳에 나를 데려가라"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7448",
+      "date": "2026.05.16.",
+      "writer": "총명하군 최순희",
+      "title": "[DAY2] 내가 손해를 보고싶지 않은 마음"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7442",
+      "date": "2026.05.16.",
+      "writer": "도사 정수진",
+      "title": "[Day 7] 도사 정수진/ 부자들의 생각법 (통제의 환상)"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7439",
+      "date": "2026.05.16.",
+      "writer": "꾸준하군 한윤정",
+      "title": "[공유] [Day 4 꾸준하군 한윤정 / 도박사의 오류]"
+    },
+    {
+      "menu": "39",
+      "page": 1,
+      "article_number": "7436",
+      "date": "2026.05.15.",
+      "writer": "굳건하군 이태희",
+      "title": "[Day 4] 굳건하군 이태희 / 원금보장 상품 손해, 잘못된 주식처분"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7434",
+      "date": "2026.05.15.",
+      "writer": "철저하군",
+      "title": "Day11. untitle"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7429",
+      "date": "2026.05.15.",
+      "writer": "블루진즈 황의진",
+      "title": "[공유] [Day 5] 내가 할 수 있는 최선의 선택"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7422",
+      "date": "2026.05.14.",
+      "writer": "철저하군",
+      "title": "Day 10. 이해시키려 애쓰지 마세요"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7420",
+      "date": "2026.05.14.",
+      "writer": "도사 정수진",
+      "title": "[Day 6]  도사 정수진/ 부자들의 생각법 ( 현상유지편향/ 사후가정사고)"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7418",
+      "date": "2026.05.13.",
+      "writer": "철저하군",
+      "title": "Day 9. 읽히는 글"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7412",
+      "date": "2026.05.13.",
+      "writer": "도사 정수진",
+      "title": "[Day 5] 도사 정수진/ 부자들의 생각법 (기록/ 망설임)"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7411",
+      "date": "2026.05.13.",
+      "writer": "도사 정수진",
+      "title": "[Day 4] 도사 정수진/ 부자들의 생각법 (세상을 보는 시각)"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7407",
+      "date": "2026.05.12.",
+      "writer": "일리아나",
+      "title": "[day4]일리아나 권가은 / 인지 부조화"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7404",
+      "date": "2026.05.12.",
+      "writer": "총명하군 최순희",
+      "title": "[Day1] 부자들의 생각법"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7400",
+      "date": "2026.05.12.",
+      "writer": "양기웅",
+      "title": "[Day4] 푸우욱 쉬는 방법 / 럭키아이(양기웅)"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7399",
+      "date": "2026.05.12.",
+      "writer": "철저하군",
+      "title": "Day 8. 지금이라는 우물"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7398",
+      "date": "2026.05.12.",
+      "writer": "블루진즈 황의진",
+      "title": "[공유] [Day 4] 저, 참 잘 지내고 있어요"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7379",
+      "date": "2026.05.10.",
+      "writer": "충실하군 최경남",
+      "title": "[Day 3] 충실하군 최경남 / 입주점검 간접체험"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7376",
+      "date": "2026.05.10.",
+      "writer": "일리아나",
+      "title": "[day3]일리아나 권가은 / 감사"
+    },
+    {
+      "menu": "39",
+      "page": 2,
+      "article_number": "7375",
+      "date": "2026.05.10.",
+      "writer": "일리아나",
+      "title": "[Day2]일리아나 권가은 / 엄마 나도 주식할래"
+    },
+    {
+      "menu": "39",
+      "page": 3,
+      "article_number": "7374",
+      "date": "2026.05.10.",
+      "writer": "양기웅",
+      "title": "[DAY3] 기저효과의 비밀 / 럭키아이 (양기웅)"
+    },
+    {
+      "menu": "39",
+      "page": 3,
+      "article_number": "7373",
+      "date": "2026.05.10.",
+      "writer": "양기웅",
+      "title": "[Day2] 확증편향에 대하여 / 럭키아이(양기웅)"
+    },
+    {
+      "menu": "39",
+      "page": 3,
+      "article_number": "7371",
+      "date": "2026.05.10.",
+      "writer": "블루진즈 황의진",
+      "title": "[공유] [Day 3] 조금 느슨하면 어때?"
+    },
+    {
+      "menu": "39",
+      "page": 3,
+      "article_number": "7369",
+      "date": "2026.05.10.",
+      "writer": "철저하군",
+      "title": "Day 7. 돈에 대한 관념"
+    },
+    {
+      "menu": "39",
+      "page": 3,
       "article_number": "7366",
       "date": "2026.05.10.",
       "writer": "굳건하군 이태희",
@@ -406,15 +1278,7 @@
     },
     {
       "menu": "39",
-      "page": 1,
-      "article_number": "7365",
-      "date": "2026.05.10.",
-      "writer": "굳건하군 이태희",
-      "title": "[Day 3] 굳건하군 이태희 / 투자할 때는 의심의 눈으로, 매몰비용의 오류"
-    },
-    {
-      "menu": "39",
-      "page": 1,
+      "page": 3,
       "article_number": "7363",
       "date": "2026.05.10.",
       "writer": "도사 정수진",
@@ -422,15 +1286,15 @@
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 3,
       "article_number": "7362",
       "date": "2026.05.10.",
       "writer": "도사 정수진",
-      "title": "[Day 2] 도사 정수진/ 돈의 심리학(손실회피, 포트폴리오, 자동주문, 본전)"
+      "title": "[Day 2] 도사 정수진/ 부자들의 생각법(손실회피, 포트폴리오, 자동주문, 본전)"
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 3,
       "article_number": "7357",
       "date": "2026.05.10.",
       "writer": "충실하군 최경남",
@@ -438,7 +1302,7 @@
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 3,
       "article_number": "7355",
       "date": "2026.05.09.",
       "writer": "철저하군",
@@ -446,7 +1310,7 @@
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 3,
       "article_number": "7347",
       "date": "2026.05.09.",
       "writer": "양기웅",
@@ -454,7 +1318,7 @@
     },
     {
       "menu": "39",
-      "page": 1,
+      "page": 3,
       "article_number": "7346",
       "date": "2026.05.09.",
       "writer": "블루진즈 황의진",
@@ -462,7 +1326,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 3,
       "article_number": "7345",
       "date": "2026.05.09.",
       "writer": "블루진즈 황의진",
@@ -470,7 +1334,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 3,
       "article_number": "7337",
       "date": "2026.05.08.",
       "writer": "굳건하군 이태희",
@@ -478,7 +1342,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 3,
       "article_number": "7332",
       "date": "2026.05.08.",
       "writer": "철저하군",
@@ -486,7 +1350,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 3,
       "article_number": "7325",
       "date": "2026.05.08.",
       "writer": "도사 정수진",
@@ -494,7 +1358,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7324",
       "date": "2026.05.08.",
       "writer": "꾸준하군 한윤정",
@@ -502,7 +1366,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7322",
       "date": "2026.05.07.",
       "writer": "철저하군",
@@ -510,7 +1374,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7316",
       "date": "2026.05.07.",
       "writer": "꾸준하군 한윤정",
@@ -518,7 +1382,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7315",
       "date": "2026.05.07.",
       "writer": "꾸준하군 한윤정",
@@ -526,7 +1390,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7308",
       "date": "2026.05.06.",
       "writer": "일리아나",
@@ -534,7 +1398,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7305",
       "date": "2026.05.06.",
       "writer": "굳건하군 이태희",
@@ -542,7 +1406,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7302",
       "date": "2026.05.06.",
       "writer": "철저하군",
@@ -550,7 +1414,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7300",
       "date": "2026.05.06.",
       "writer": "충실하군 최경남",
@@ -558,7 +1422,7 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7294",
       "date": "2026.05.05.",
       "writer": "철저하군",
@@ -566,11 +1430,35 @@
     },
     {
       "menu": "39",
-      "page": 2,
+      "page": 4,
       "article_number": "7289",
       "date": "2026.05.04.",
       "writer": "철저하군",
       "title": "Day1. 신속한 결정이 가져오는 성과"
+    },
+    {
+      "menu": "40",
+      "page": 1,
+      "article_number": "7465",
+      "date": "2026.05.17.",
+      "writer": "쓰나미",
+      "title": "(Day 5) 7권의 이름표, 그리고 과감한 매도의 시간"
+    },
+    {
+      "menu": "40",
+      "page": 1,
+      "article_number": "7458",
+      "date": "2026.05.17.",
+      "writer": "쓰나미",
+      "title": "(Day 4) 4년 만에 털어낸 먼지, 그리고 굴러가기 시작한 바퀴"
+    },
+    {
+      "menu": "40",
+      "page": 1,
+      "article_number": "7390",
+      "date": "2026.05.11.",
+      "writer": "쓰나미",
+      "title": "(Day 3) 'The P.M'이 가져온 운명적 전환(feat. 돈의 심리학 -> 富思 & 生)"
     },
     {
       "menu": "40",
