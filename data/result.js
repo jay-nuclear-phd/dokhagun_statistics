@@ -1,5 +1,5 @@
 window.naverCafeData = {
-  "updated_at": "2026-06-26 04:03:39",
+  "updated_at": "2026-07-13 04:03:46",
   "start_date": "2026-05-04",
   "end_date": "2026-05-31",
   "count": 307,
@@ -854,7 +854,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 1,
+      "page": 2,
       "article_number": "7608",
       "date": "2026.05.31.",
       "writer": "유니크하군",
@@ -974,7 +974,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 2,
+      "page": 3,
       "article_number": "7575",
       "date": "2026.05.26.",
       "writer": "톡톡하군 김성호",
@@ -1094,7 +1094,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 3,
+      "page": 4,
       "article_number": "7523",
       "date": "2026.05.23.",
       "writer": "명확하군",
@@ -1214,7 +1214,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 4,
+      "page": 5,
       "article_number": "7488",
       "date": "2026.05.19.",
       "writer": "의리하군 정승일",
@@ -1334,7 +1334,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 5,
+      "page": 6,
       "article_number": "7433",
       "date": "2026.05.15.",
       "writer": "명확하군",
@@ -1454,7 +1454,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 6,
+      "page": 7,
       "article_number": "7385",
       "date": "2026.05.11.",
       "writer": "뚝샘",
@@ -1574,7 +1574,7 @@ window.naverCafeData = {
     },
     {
       "menu": "38",
-      "page": 7,
+      "page": 8,
       "article_number": "7339",
       "date": "2026.05.09.",
       "writer": "뚝샘",
