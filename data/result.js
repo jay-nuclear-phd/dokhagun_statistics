@@ -1,5 +1,5 @@
 window.naverCafeData = {
-  "updated_at": "2026-07-17 04:03:54",
+  "updated_at": "2026-07-20 04:04:08",
   "start_date": "2026-05-04",
   "end_date": "2026-05-31",
   "count": 307,
